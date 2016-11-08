@@ -1,0 +1,88 @@
+﻿.courses-class-header {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    overflow: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.courses-class-wrap {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/*.courses-class-header > a {
+    float: left; 
+    color: #1973B2; 
+    margin-top: 0px;
+}*/
+
+.courses-class-header > a {
+    float: right;
+    color: #1973B2;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+}
+/*.courses-class-header > div > a {
+    font-weight:bold;
+    
+}*/
+
+.courses-class-header > div > a:hover {
+    color: #1973B2;
+}
+
+.courses-class-table-icon {
+    color: #1973B2;
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 10px;
+}
+
+.courses-class-not-started {
+    color: #CA5100;
+}
+
+.courses-class-done {
+    color: #207a0f;
+}
+
+.courses-class-ongoing {
+    color: #F3CB74;
+}
+
+.courses-class-cancelled {
+    color: red;
+}
+
+.courses-class-capacity {
+    text-align: center;
+    border-bottom: 0px !important;
+}
+
+.font-weight-add-class {
+    font-weight: bold;
+}
+
+.icon-edit {
+    background-size: 29px;
+    background-repeat: no-repeat;
+    background-image: url("../images/icon-edit-table.png");
+    padding-left: 27px;
+    background-position-y: 3px;
+}
+
+.icon-delete {
+    background-size: 29px;
+    background-repeat: no-repeat;
+    background-image: url("../images/plus-psd-png.jpg");
+    padding-left: 27px;
+    background-position-y: 3px;
+}
+
+.align-image-right {
+    margin-right: 10px;
+    cursor: pointer;
+}

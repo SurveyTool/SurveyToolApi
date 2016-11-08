@@ -1,0 +1,134 @@
+﻿.trainer-method {
+    .float-right-button {
+        float: right;
+        margin-top: 20px;
+    }
+
+    .well {
+        border: hidden;
+    }
+
+    .add-trainer-color {
+        color: #1CB1FF !important;
+    }
+
+    .name-add-new-class {
+        color: #1FB2FF;
+    }
+
+    .name-general {
+        padding-left: 30px;
+        color: #1FB2FF;
+        margin-top: -5px;
+    }
+
+    .general-color {
+        background-color: #ffffff;
+    }
+
+    .name-general-line {
+        margin-top: -10px;
+    }
+
+    .line-under-general-and-trainer {
+        stroke: rgb(142,216,255);
+        stroke-width: 2;
+    }
+
+    .class-info {
+        left: 9px;
+        margin-bottom: 10px;
+    }
+
+    .class-info-type {
+        width: 87%;
+        border-radius: 0px;
+    }
+
+    .register-deadline-info {
+        border-radius: 0px;
+        border-right: none;
+    }
+
+    .calendar-info {
+        border-radius: 0px;
+        border-left: none;
+        color: #9D9EA2;
+    }
+
+    .class-info-type-methodology {
+        resize: vertical;
+        width: 87%;
+        border-radius: 0px;
+    }
+
+    .trainer-element {
+        background-color: #F9F9F9;
+        border-radius: 0px;
+        border: hidden;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05) inset;
+        padding-bottom: 10px;
+    }
+
+    .name-trainer {
+        padding-left: 30px;
+        color: #1FB2FF;
+    }
+
+    .remove-trainer {
+        color: #A6A7AB;
+        float: right;
+        top: -85px;
+        left: 15px;
+        margin-right: -10px;
+        text-decoration: none !important;
+    }
+
+    .trainer-info-type {
+        width: 90%;
+        margin-left: -5px;
+        border-radius: 0px;
+    }
+
+    .introduce-info-type {
+        resize: vertical;
+        width: 90%;
+        margin-left: -5px;
+        border-radius: 0px;
+    }
+
+    .validation-trainer {
+        margin-left: -5px;
+    }
+
+    .cancel-customize {
+        background-color: #959595 !important;
+        color: white !important;
+    }
+
+    .trainer-header {
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .customize-btn {
+        float: right;
+    }
+
+    .field-name-add-class {
+        left: 19px;
+    }
+
+    .text-area-add-class {
+        left: -11px;
+    }
+
+    .dropdown-autocomplete {
+        text-align: left;
+    }
+
+    .field-class-name {
+        word-break: break-all;
+        table-layout: fixed;
+    }
+}

@@ -1,0 +1,98 @@
+﻿<div ng-controller="ResultSurveyController" id="resultSurvey" style="margin-top:50px">
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#dasboard">Dasboard</a></li>
+        <li class="active">Result survey</li>
+    </ol>
+    <h1 id="idTitleResultSurvey">Result Survey: {{titleSurvey}}</h1>
+    <div id="menuListResult" class="box box-solid box-danger">
+        <div class="box-header">
+            <h3 class="box-title">Statistics</h3>
+        </div><!-- /.box-body -->
+    </div>
+    <div layout="row" flex="95" style="margin:auto;">
+         <ul flex="80" class="cbp-rfgrid" id="idChart" layout="row" style="margin:auto;" >
+        
+        </ul>
+
+        <div flex="20" style="margin-top:-70px">
+            <md-card style="margin-top:-1px">
+                <md-card-header style="background:#629c44; border-bottom:solid 1px #efefef;">
+                    <h4 style="color:white;text-align:center;margin:auto;">Detail survey</h4>
+                </md-card-header>
+                <md-card-content style="font-size:18px">
+                    <p>Name survey:<span>{{nameSurvey}}</span></p>
+                    <p>Date Start:<span>{{dateStart}}</span></p>
+                    <p>Deadline:<span>{{deadline}}</span></p>
+                    <p>Number of questions:<span>{{numberColumn.length}}</span></p>
+                    <p>Number of record result:<span>{{numberRow.length}}</span></p>
+                </md-card-content>
+            </md-card>
+        </div>
+     </div>
+    <div id="menuListResult" class="box box-solid box-danger" style="margin-top:60px">
+        <div class="box-header">
+            <h3 class="box-title">List record</h3>
+            <div flex></div>
+        <div layout="row" layout-align="end center">
+            <md-button md-primary ng-click="filterData()" id="filterDataId" style="left:0">
+                <i class="fa fa-filter" aria-hidden="true"></i>
+                <span>Filter</span>
+            </md-button>
+            <md-button md-primary ng-click="refeshResult()">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+                <span>Refesh</span>
+            </md-button>
+            </div>
+        </div><!-- /.box-body -->
+    </div>
+
+    <div layout="row" flex="90" style="margin:auto;">
+        <div flex="80" style="font-size:18px">
+            <div class="table-responsive-vertical shadow-z-1"  style="background:#fff">
+                <!-- Table starts here -->
+                <div class="tableR">
+                    <div class="rowR header green" ng-show="showTitle">
+                        <div ng-repeat="titleAnswer  in listAnswerObj[0]" class="cellR">
+                            <div layout="row"  flex="100" >
+                                <div flex="98" style="text-align:center"><p style="margin-top:auto;margin-bottom:auto">{{titleAnswer.Contents}}</p></div>
+                                <div flex="2" style="margin-left:2%; align-content:stretch"  layout="column" ng-if="titleAnswer.Contents!='STT'">
+                                    <i  style="margin:auto" class="fa fa-caret-up" ng-attr-id="{{'icon1'+titleAnswer.$id}}" ng-click="sortItem(titleAnswer.Contents,true,titleAnswer.$id)"></i>
+                                    <i  style="margin-top:auto" class="fa fa-caret-down" ng-attr-id="{{'icon2'+titleAnswer.$id}}" ng-click="sortItem(titleAnswer.Contents,false,titleAnswer.$id)"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rowR header green" ng-show="showFilter" >
+                        <div ng-repeat="titleAnswer in listAnswerObj[0]" class="cellR">
+                            <div >
+                                <md-input-container md-no-float  ng-if="titleAnswer.QuestionTypeText!='MultipleChoice' &&titleAnswer.QuestionTypeText!='Dropdown' && titleAnswer.QuestionTypeText!='CheckBoxs'">
+                                    <input placeholder={{titleAnswer.Contents}} ng-if="titleAnswer.Contents!='STT'" ng-model="titleAnswer.filterText" ng-keyup="filterText(titleAnswer)" md-select-on-focus>
+                                </md-input-container>
+                                <md-input-container style="margin-bottom:40px" ng-if="titleAnswer.QuestionTypeText=='MultipleChoice' ||titleAnswer.QuestionTypeText=='Dropdown' || titleAnswer.QuestionTypeText=='CheckBoxs'">
+                                    <md-select ng-change="filterChoice(titleAnswer,selectItem)" ng-model="selectItem"  multiple md-select-on-focus>
+                                        <md-option ng-repeat="listItem in titleAnswer.ListDistanceItem" ng-value="listItem">
+                                            {{listItem}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-repeat="contentAnswerRow in numberRow" class="rowR">
+                        <div ng-repeat="i in numberColumn" class="cellR">
+                            {{contentAnswerRows[contentAnswerRow][i]}}
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+
+        </div>
+    </div>
+    
+   
+    
+    
+</div>

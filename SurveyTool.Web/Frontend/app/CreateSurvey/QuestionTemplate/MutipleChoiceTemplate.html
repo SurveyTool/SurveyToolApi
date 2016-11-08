@@ -1,0 +1,13 @@
+﻿<div layout="row">
+    <p ng-show="showError" style="color:red">Option Similar</p>
+    <md-radio-group>
+        <md-radio-button ng-repeat="1 in [1]">
+
+        </md-radio-button>
+    </md-radio-group>
+    <md-input-container>
+        <label>Option name</label>
+        <input ng-model="option">
+        <md-button md-no-ink class="md-primary" ng-click="remove"><<i class="material-icons">clear</i></md-button>
+    </md-input-container>
+</div>

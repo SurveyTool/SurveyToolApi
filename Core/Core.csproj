@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C82AE243-D4B4-4C0F-B4F9-26CB0AC96268}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\SurveyToolV1\packages\AutoMapper.3.3.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\..\SurveyToolV1\packages\AutoMapper.3.3.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\SurveyToolV1\packages\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\SurveyToolV1\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Interception">
+      <HintPath>..\packages\Ninject.Extensions.Interception.3.2.0.0\lib\net45-full\Ninject.Extensions.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Interception.DynamicProxy">
+      <HintPath>..\packages\Ninject.Extensions.Interception.DynamicProxy.3.2.0.0\lib\net45-full\Ninject.Extensions.Interception.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\..\SurveyToolV1\packages\Quartz.2.3.1\lib\net40\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine">
+      <HintPath>..\..\SurveyToolV1\packages\RazorEngine.3.7.6\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContext\EfDataContext.cs" />
+    <Compile Include="DataContext\IDataContext.cs" />
+    <Compile Include="DataContext\IDataContextProvider.cs" />
+    <Compile Include="Entities\Auditing\AuditableEntity.cs" />
+    <Compile Include="Entities\Auditing\IAuditableEntity.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\EntityExtensions.cs" />
+    <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\ISoftDelete.cs" />
+    <Compile Include="Entities\Job\Job.cs" />
+    <Compile Include="Entities\Permission\Operation.cs" />
+    <Compile Include="Entities\Permission\Permission.cs" />
+    <Compile Include="Entities\Permission\Role.cs" />
+    <Compile Include="JobScheduling\ISfJob.cs" />
+    <Compile Include="Mail\IMailer.cs" />
+    <Compile Include="Mail\Mailer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\EfRepositoryBase.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Runtime\Caching\MemoryCacher.cs" />
+    <Compile Include="Runtime\Configuration\ISfConfig.cs" />
+    <Compile Include="Runtime\Configuration\SfConfig.cs" />
+    <Compile Include="Runtime\Log\ISfLogger.cs" />
+    <Compile Include="Runtime\Log\SfLogger.cs" />
+    <Compile Include="Runtime\Session\ISfSession.cs" />
+    <Compile Include="Runtime\Session\SfSession.cs" />
+    <Compile Include="Services\ApplicationService.cs" />
+    <Compile Include="Services\IApplicationService.cs" />
+    <Compile Include="Services\Job\Dtos\ActionDto.cs" />
+    <Compile Include="Services\Job\Dtos\JobDto.cs" />
+    <Compile Include="Services\Job\Dtos\NewJobDto.cs" />
+    <Compile Include="Services\Job\IJobService.cs" />
+    <Compile Include="Services\Job\JobService.cs" />
+    <Compile Include="Services\Permission\Dtos\OperationDto.cs" />
+    <Compile Include="Services\Permission\Dtos\PermissionDto.cs" />
+    <Compile Include="Services\Permission\Dtos\PermissionRoleDto.cs" />
+    <Compile Include="Services\Permission\Dtos\RoleDto.cs" />
+    <Compile Include="Services\Permission\IPermissionService.cs" />
+    <Compile Include="Services\Permission\PermissionService.cs" />
+    <Compile Include="Uow\EfUnitOfWork.cs" />
+    <Compile Include="Uow\EfUnitOfWorkInterceptor.cs" />
+    <Compile Include="Uow\IUnitOfWork.cs" />
+    <Compile Include="Uow\UnitOfWorkAttribute.cs" />
+    <Compile Include="Uow\UnitOfWorkHelper.cs" />
+    <Compile Include="Utils\Utils.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

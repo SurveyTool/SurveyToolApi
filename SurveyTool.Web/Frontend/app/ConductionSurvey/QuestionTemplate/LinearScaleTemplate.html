@@ -1,0 +1,21 @@
+﻿
+<div ng-show="VisibleQuestion">
+    <p id="titlequestion">{{data.questionNumber}}. {{data.questionName}} <span ng-show="Required" style="color:red">*</span></p>
+    <div id="optionQuestion">
+        <p ng-show="showRequired" style="color:red">Please choice option.</p>
+        <md-radio-group  layout="row" class="md-primary" style="border:none;outline:none">
+            <div ng-repeat="d in data.dataOption" style="width:10%;border:none;outline:none">
+                <md-radio-button ng-value="d.value" style="margin:auto;border:none;outline:none" ng-click="choiceValueLinearScale(d.value)">
+                </md-radio-button>
+                <p style="margin-left:7%">{{d.label}}</p>
+            </div>
+
+        </md-radio-group>
+        <p ng-show="inputComment" style="color:red">Please enter reason.</p>
+        <md-input-container style="width:80%" ng-show="showComment">
+            
+            <label>Reason rating low.</label>
+            <textarea ng-model="commentdata"></textarea>
+        </md-input-container>
+    </div>
+</div>

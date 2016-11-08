@@ -1,0 +1,66 @@
+﻿<div >
+    <!-- chứa danh sách question-->
+    <md-content >
+        <md-card style="background:#fff; border: 1px solid #1BBBFB;">
+            <md-card-header style="align-self: center;">
+                <div dnd-handle class="handle">:::</div>
+            </md-card-header>
+            <md-card-content style="align-self:center;width:90%;background:#fff">
+                <md-input-container md-no-float class="md-block" style="">
+                    
+                    <textarea placeholder="Question Name" style="font-size:20px;" ng-model="questionname" md-select-on-focus></textarea>
+                </md-input-container>
+                <form ng-submit="submit()" ng-cloak="">
+                    <div layout="column" ng-attr-id="{{'question'+indexId+'_'+inNumberPage}}"></div>
+                    <p>
+                        <md-button class="md-raised" ng-show="visibleButtonAddOption" ng-click="addItem()" type="button">Add</md-button>
+                        
+                    </p>
+                </form>
+            </md-card-content>
+
+            <md-card-actions style="background:#fff;border-top:solid 1px #efefef;" layout="row" layout-align="end center">
+
+                <md-select ng-model="type" ng-change="changeTypeQuestion()" placeholder="Question Type" md-model="type" >
+                    <md-option value="ShortAnswer">
+                        <div layout="row"><i class="material-icons " style="color:#817f7f;margin-top:-1%"><i class="material-icons">sort</i></i>Short answer</div>
+                    </md-option>
+                    <md-option value="Paragraph">
+                        <div layout="row"><i class="material-icons " style="color:#817f7f;margin-top:-1%">clear_all</i>Pragraph</div>
+                    </md-option>
+                    <hr>
+                    <md-option value="MultipleChoice">
+                        <div layout="row"><i class="material-icons " style="color:#817f7f;margin-top:-1%">radio_button_checked</i>Mutiple Choice</div>
+                    </md-option>
+                    <md-option value="CheckBoxs">
+                        <div layout="row"><i class="material-icons " style="color:#817f7f;margin-top:-1%">check_box</i>Checkboxs</div>
+                    </md-option>
+                    <md-option value="Dropdown">
+                        <div layout="row"><i class="material-icons " style="color:#817f7f;margin-top:-1%">arrow_drop_down_circle</i>Dropdown</div>
+                    </md-option>
+                    <hr>
+                    <md-option value="LinearScale">
+                        <div layout="row"><i class="material-icons " style="color:#817f7f;margin-top:-1%">linear_scale</i>Linear Scale</div>
+                    </md-option>
+                    <hr>
+                    <md-option value="Date">
+                        <div layout="row"><i class="material-icons" style="color:#817f7f;margin-top:-1%">date_range</i>Date</div>
+                    </md-option>
+
+                </md-select>
+
+                <md-switch ng-model="requiredQuestion" aria-label="Switch 2" ng-true-value="true" ng-false-value="false" class="md-warn">Required</md-switch>
+                <md-button class="md-icon-button" ng-click="showConfirm($event)">
+                    <md-tooltip>
+                        Delete
+                    </md-tooltip>
+                    <i class="material-icons">delete</i>
+                </md-button>
+            </md-card-actions>
+        </md-card>
+    </md-content>
+   
+</div>
+    
+   
+

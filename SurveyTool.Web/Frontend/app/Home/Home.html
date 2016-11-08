@@ -1,0 +1,99 @@
+﻿<div ng-controller="HomeController" style="margin-top:50px">
+    
+    <md-content layout-xs="row" layout="colum" style="background:#EEEEEE">
+        
+        <md-card  md-theme-watch="" class="section1">
+            <md-card-header class="section2" layout="column">
+                <div layout="row" id="sectionTitle">
+                    <h1 id="titleTool">A Sur</h1>
+                    <img ng-src="/frontend/images/v-icon.png" alt="W3Schools.com" style="width:70px"> 
+                    <h1 id="titleTool">ey Tool</h1>
+                </div>
+                <div>
+                    <h1 id="titleSlogan"> A simple and powerful online survey tool.</h1>
+                </div>
+                <div>
+                    <md-button id="buttoGetStated"  class="md-raised md-primary" ng-click="showAdvanced($event)">Get Stated</md-button>
+
+                </div>
+            <md-card-header>
+        </md-card>
+        
+
+
+
+
+    </md-content>
+    <md-content layout-xs="row" layout="colum" style="background:#EEEEEE">
+
+        <md-card layout="column" md-theme-watch="" style="height:70px;background-color: #629c44;width:100%;align-items:center;align-content:center">
+
+            <md-card-header style="height:70px;align-items:center;align-content:center">
+                <div><h1 style="color:white">Create a free template survey</h1></div>
+            <md-card-header>
+               
+
+        </md-card>
+       
+
+    </md-content>
+    <h2 class="introducing">Introducing</h2>
+    
+        <div layout="row" style="width:100%;background:#EEEEEE">
+           <table style="width:100%">
+               <tr>
+                   <td style="vertical-align:middle;text-align:center">
+                       <img ng-src="/frontend/images/Tools-2-icon.png" alt="W3Schools.com" style="width:200px"> 
+                       <h2>Custom template survey</h2>
+                   </td>
+                   <td style="vertical-align:middle;text-align:center">
+                       <img ng-src="/frontend/images/imgburn___easy_burner_icon_replacement_by_sacrificials-d6e4jin.png" alt="W3Schools.com" style="width:200px"> 
+                       <h2>Custom template survey</h2>
+                   </td>
+               </tr>
+               <tr>
+                   <td><br /></td>
+               </tr>
+               <tr>
+                   <td><br /></td>
+               </tr>
+               <tr>
+                   <td><br /></td>
+               </tr>
+               <tr>
+                   
+                   <td style="vertical-align:middle;text-align:center">
+                       <img ng-src="/frontend/images/8b56f198f157ed67d1f6c4f0b64abb05.png" alt="W3Schools.com" style="width:200px">
+                       <h2>Multiple Type Question</h2>
+                   </td>
+                   <td style="vertical-align:middle;text-align:center">
+                       <img ng-src="/frontend/images/reciclagem.png" alt="W3Schools.com" style="width:200px">
+                       <h2>Re-Written Questions</h2>
+                   </td>
+               </tr>
+           </table>
+        </div>
+    
+
+    <script type="text/ng-template" id="dialog1.tmpl.html">
+        <md-dialog style="position:relative;margin-bottom:400px">
+            <div class="wrapper">
+                <form class="form-signin">
+                    <h2 class="form-signin-heading">Please login</h2>
+                    <input type="text" id="usernameLogin" class="form-control" ng-model="username"  name="username" placeholder="User Name" required="" autofocus="" />
+                    <input type="password" if="passwordLogin" class="form-control" ng-keypress="($event.which === 13)?login():0"  ng-model="password" name="password" placeholder="Password" required="" />
+                    
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="login()">Login</button>
+                    <p style="color:#ff0000">{{errorLogin}}</p>
+                    <br />
+                    <a style="cursor:pointer" ng-click="goRegister()">I don't have account</a>
+                </form>
+            </div>
+           
+        </md-dialog>
+    </script>
+
+
+
+    
+</div>

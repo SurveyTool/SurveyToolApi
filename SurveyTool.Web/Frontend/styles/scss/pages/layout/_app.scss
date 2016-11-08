@@ -1,0 +1,45 @@
+﻿body {
+    font-family: $app-font-family;
+    font-size: $app-font-size;
+    font-weight: $app-font-weight;
+    font-style: $app-font-style;
+    letter-spacing: $app-letter-spacing;
+    color: $app-font-primary-color;
+    background-color: $app-background-color;
+}
+
+a {
+    color: $app-link-font-color;
+
+    &:hover {
+        color: $app-link-font-color;
+    }
+}
+
+.app-side-padding {
+    padding-left: $app-side-padding;
+    padding-right: $app-side-padding;
+}
+
+.form-horizontal .control-label {
+    text-align: left !important;
+}
+
+.modal-body {
+    .general-form {
+        padding-bottom: 0!important;
+        .action-button {
+            float: right;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.modal-inside-content{
+     .modal-footer {
+        border-top: 0px;
+        text-align: right;
+    }
+}
+

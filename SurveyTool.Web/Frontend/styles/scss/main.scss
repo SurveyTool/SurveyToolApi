@@ -1,0 +1,50 @@
+﻿// App Constants
+@import 'constants/all';
+
+// App Mixins
+@import 'components/all';
+
+// App Layout
+@import 'pages/layout/app';
+@import 'pages/layout/app_header';
+@import 'pages/layout/app_content';
+@import 'pages/layout/app_footer';
+
+
+// App Pages
+@import 'pages/authentication/login';
+@import 'pages/course/view_course';
+@import 'pages/course/_upcoming_course';
+@import 'pages/course/add_course';
+@import 'pages/course/course_catalog';
+@import 'pages/course/course.class';
+@import 'pages/course/course_resource';
+@import 'pages/course/course_session';
+@import 'pages/course/calendar';
+@import 'pages/course/general_course';
+@import "pages/course/course_class";
+
+@import 'pages/class/registration';
+@import 'pages/class/assignment_trainee';
+@import 'pages/class/myclass';
+@import 'pages/class/my_teaching_class.scss';
+@import 'pages/class/edit.assignment';
+@import 'pages/class/time_place';
+@import 'pages/class/add.assignment';
+@import 'pages/class/trainer-method';
+@import 'pages/class/class.activity';
+@import 'pages/class/add.new.class';
+@import 'pages/class/assignment_trainer';
+@import 'pages/class/registration';
+@import 'pages/class/participant';
+@import 'pages/class/add.survey';
+@import 'pages/class/menu_survey';
+@import 'pages/class/survey_report';
+@import 'pages/class/edit.survey';
+@import 'pages/class/survey_question';
+@import 'pages/class/add.survey.template';
+@import 'pages/class/view_survey';
+@import 'pages/class/edit.survey.template';
+
+@import 'pages/registration/member.registrations';
+

@@ -1,0 +1,270 @@
+﻿.name-field-course {
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.edit-course {
+    cursor: pointer;
+}
+
+.general-course-row {
+    padding: 10px 0px 10px;
+}
+
+.course-image-size {
+    @include SetSize(155px,150px);
+}
+
+.course-info-area {
+    border-bottom: 2px solid $boder-gray-color;
+}
+
+.info-icon-material {
+    color: red;
+}
+
+.teacher-image-size {
+    @include SetSize(90px,90px);
+    margin-left: -24px;
+}
+
+.session-class {
+    border-bottom: 1px solid $boder-gray-color;
+    line-height: 34px;
+    margin-left: 13px;
+    margin-right: 11px;
+}
+
+.progress {
+    overflow: inherit;
+    border-radius: 0px;
+}
+
+.available-class {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: -30px;
+}
+
+.start-time {
+    position: relative;
+    width: 134px;
+    line-height: 34px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    padding-left: 15px;
+    background-color: #7DB4DB;
+    color: #FFF;
+}
+
+.line-distance {
+    line-height: 25px;
+    padding-left: 0px;
+    word-wrap: break-word;
+}
+
+.general-course-info {
+    border-bottom: 1px solid $boder-gray-color;
+}
+
+.course-class-info {
+    background-color: $app-backgroud-gray-color;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+
+    .popover.right {
+        min-width: 250px !important;
+        background-color: #79D1FF;
+        color: #FFF;
+
+        > .arrow:after {
+            border-right-color: #79D1FF;
+        }
+    }
+}
+
+.trainer-info {
+    background-color: #FFF;
+    margin: 0px 11px 10px 11px;
+    padding: 4px 4px 4px 0px;
+    border: 1px solid $boder-gray-color;
+}
+
+.progress .progress-bar .value-now {
+    position: absolute;
+    font-size: 15px;
+    top: -21px;
+    right: 0px;
+    color: #000000;
+}
+
+.capacity {
+    margin-top: -60px;
+}
+
+.available-class-session {
+    padding-right: 25px;
+    margin-top: 25px;
+    margin-left: 12px;
+
+    .btn-list-registration {
+        padding-top: 0px !important;
+        margin-top: -3px !important;
+        font-size: 18px !important;
+    }
+}
+
+.trainer-info-title {
+    padding-bottom: 10px;
+    padding-left: 11px;
+}
+
+.add-class {
+    text-decoration: none !important;
+    padding-left: 50px;
+}
+
+.add-class-text {
+    border-bottom: 1px solid;
+}
+
+.course-material {
+    background-color: $app-backgroud-gray-color;
+    padding-left: 10px;
+}
+
+.course-description {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-left: 13px;
+}
+
+a.read-more, a.read-less {
+    cursor: pointer;
+    color: #0071C1;
+    display: block;
+}
+
+span.more-text {
+    display: none;
+}
+
+span.more-text.show {
+    display: inline !important;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 21px 16px 0;
+    top: 1px;
+    right: 0;
+    border-color: transparent $app-backgroud-gray-color transparent transparent;
+}
+
+.toggle-link {
+    cursor: pointer;
+    color: #0071C1;
+    font-weight: bolder;
+}
+
+.non-padding-left {
+    padding-left: 0px;
+}
+
+.summary {
+    text-align: justify;
+    overflow-x: auto;
+}
+
+.text-color-approve {
+    color: #42D748;
+    margin-right: 15px;
+}
+
+.text-color-pendding-approval {
+    color: #F0B51D;
+    margin-right: 15px;
+}
+
+.text-color-rejected {
+    color: #DF0238;
+    margin-right: 15px;
+}
+
+.btn-register {
+    margin-right: 16px;
+}
+
+.button-dropdown-registration {
+    border-radius: 0px;
+    margin-top: 37px;
+    min-width: 145px;
+}
+
+#class-registration-list {
+    .action {
+        text-align: right;
+    }
+
+    .search-input {
+        border-bottom: 1px solid #D7D7D7;
+        color: #7DB6E0;
+        line-height: initial;
+    }
+
+    .table-registration-list {
+        padding-top: 0 !important;
+    }
+
+    .col-number {
+        width: 5px !important;
+        padding-right: 10px !important;
+    }
+}
+
+.checkbox-view-course label {
+    display: inline-block;
+    vertical-align: middle;
+    position: initial;
+    padding-left: 5px;
+}
+
+.checkbox-view-course {
+    position: relative;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.dropdown-menu-pull-right {
+    left: 200px;
+}
+
+.btn-add-class {
+    font-size: 20px;
+}
+
+.view-course {
+    .general-form {
+        border: none;
+
+        .form-group-register {
+            margin-right: 0px;
+            margin-left: 0px;
+            margin-bottom: 0px;
+        }
+
+        .pull-right {
+            float: right;
+        }
+
+        .form-control {
+            width: 105%;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+﻿<div flex="100" ng-show="VisibleQuestion">
+    <p id="titlequestion">{{data.questionNumber}}.{{data.questionName}} <span ng-show="Required" style="color:red">*</span></p>
+    <div id="optionQuestion">
+        <p ng-show="showRequired" style="color:red">Please input answer.</p>
+        <md-input-container style="width:80%">
+            <label>Your Answer.</label>
+            <textarea ng-model="dataChoice"></textarea>
+        </md-input-container>
+    </div>
+</div>

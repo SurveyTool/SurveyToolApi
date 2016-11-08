@@ -1,0 +1,14 @@
+﻿
+<div flex ng-show="VisibleQuestion">
+    <p id="titlequestion">{{data.questionNumber}}. {{data.questionName}} <span ng-show="Required" style="color:red">*</span></p>
+    <div id="optionQuestion">
+        <p ng-show="showRequired" style="color:red">Please choice option.</p>
+        <md-input-container>
+            <md-select ng-model="dataChoice" flex="50">
+                <md-option ng-repeat="option in data.dataOption" value="{{option.label}}">
+                    {{option.label}}
+                </md-option>
+            </md-select>
+            </md-input-container>
+</div>
+</div>

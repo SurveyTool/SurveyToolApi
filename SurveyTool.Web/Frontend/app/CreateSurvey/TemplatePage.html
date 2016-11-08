@@ -1,0 +1,13 @@
+﻿<div layout="column" ng-attr-id="{{'page'+idPage}}" style="background:#fff;margin-top:30px;box-shadow: 0.3px 0.3px 1px 1px rgba(0, 0, 0, 0.2);">
+    <div >
+        <button class="buttons"   ng-attr-id="{{'buttonPage'+idPage}}" ng-click="addTemp()">Section {{numberPage}}/{{allPage}}</button>
+        <md-icon style="cursor: pointer;float:right" ng-click="removePage()">
+            <md-tooltip>
+                Delete
+            </md-tooltip>
+            <i class="material-icons">clear</i>
+        </md-icon>
+    </div>
+    <div  ng-attr-id="{{'borderLinePage'+idPage}}" style="border-top:solid 1px #d7d7d7;"></div>
+    
+</div>

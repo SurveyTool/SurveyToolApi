@@ -1,0 +1,129 @@
+﻿$thank-you-background-color: #E6F0F9;
+$color-score-high: #6ECD59;
+$color-user-high: #DFF2DC;
+$color-score-average: #E1C72A;
+$color-user-average: #FFF4D4;
+$color-score-low: #E00724;
+$color-user-low: #FACDD4;
+
+.view-survey {
+    padding: 65px 20px 10px 30px;
+
+    .general-form {
+        border: 2px solid #CCCCCC;
+        padding: 30px 80px 30px 40px;
+    }
+     .give-score {
+
+         .reset-score{
+             vertical-align: top;
+         }
+
+        .score-list {
+            font-size: 17px;
+            font-weight: bold !important;
+            background-color: white;
+            padding-left: 0px !important;
+            padding-right: 35px !important;
+            padding-top:0!important;
+        }
+
+        .score-list.btn {
+
+            &.active, &:active, &:focus {
+                box-shadow: none;
+            }
+
+            &.btn-low-score {
+
+                &.active, &:hover, &:active {
+                    color: $color-score-low;
+                }
+            }
+    
+            &.btn-average-score {
+
+                &.active, &:hover, &:active {
+                    color: $color-score-average;
+                }
+            }
+
+            &.btn-high-score {
+
+                &.active, &:hover, &:active {
+                    color: $color-score-high;
+                }
+            }
+        }
+    }
+
+    .survey-title {
+        font-size: 24px;
+        font-weight: bold;
+        word-wrap: break-word;
+    }
+
+    .survey-description {
+        margin-top: 15px;
+        word-wrap: break-word;
+    }
+
+    .question-box {
+        margin-top: 20px;
+
+        .question-code {
+            font-size: 19px;
+            margin-left: 0px;
+        }
+
+        .question-required {
+            color: red;
+        }
+
+        .question-title {
+            font-weight: bold;
+            margin: 5px 0 10px 0;
+            word-wrap: break-word;
+        }
+
+        .question-answer {
+            margin: 3px 0 3px 0;
+
+            .single-dropdown-choice {
+                margin-left: -15px;
+            }
+
+            .text-answer {
+                textarea {
+                    resize: vertical;
+
+                    .form-control {
+                        height: 90px;
+                    }
+                }
+            }
+        }
+    }
+
+    .thank-you {
+        background-color: $thank-you-background-color;
+        text-align: center;
+        font-weight: bold;
+        margin: 40px -40px -15px 0;
+        padding: 10px 0 10px 0;
+        font-size: 16px;
+        word-wrap: break-word;
+    }
+
+    .btn-control {
+        margin: 30px 0;
+
+        .btn-left {
+            float: left;
+        }
+
+        .btn-right {
+            float: right;
+        }
+    }
+}

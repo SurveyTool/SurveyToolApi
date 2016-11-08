@@ -1,0 +1,231 @@
+﻿.survey-report {
+
+    .circle-report {
+        margin: 30px 0 15px 0;
+
+        .circle {
+            text-align: center;
+        }
+
+        .circle-progress {
+            margin-top: -105px;
+        }
+
+        .progress-value {
+            font-size: 52px;
+            margin-top: 30px;
+        }
+
+        .percent {
+            font-size: 20px;
+            margin-top: 30px;
+            color: #a8a8a8;
+        }
+
+        .center {
+            color: #EDB719;
+        }
+
+        .left {
+            color: #D13960;
+        }
+
+        .right {
+            color: #6ECD59;
+        }
+
+        .circle-title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+            color: #a8a8a8;
+        }
+
+        .value-center {
+            padding-left: 20px;
+        }
+    }
+
+    .question-report {
+        .table-question-option {
+            width: 100% !important;
+        }
+
+        .table-question-text-answer {
+            width: 100% !important;
+        }
+
+        .question-title {
+            padding: 10px 25px 10px 25px;
+            background: #D2F0FF;
+            font-weight: bold;
+            margin: 10px 0px 5px 0px;
+            word-wrap: break-word;
+        }
+
+        .title-col-color {
+            border-left: 6px solid #0070C0;
+        }
+
+        .well {
+            border: none;
+            margin-bottom: -20px;
+            margin-top: -25px;
+        }
+
+        .table-col-answer {
+            width: 50% !important;
+            word-wrap: break-word;
+        }
+
+        .table-col-count {
+            width: 25% !important;
+            word-wrap: break-word;
+        }
+
+        .table-col-percentage {
+            width: 25% !important;
+            word-wrap: break-word;
+        }
+
+        .table-col-participant-name {
+            width: 20% !important;
+            word-wrap: break-word;
+        }
+
+        .table-col-participant-email {
+            width: 15% !important;
+            word-wrap: break-word;
+        }
+
+        .table-col-time {
+            width: 17% !important;
+            word-wrap: break-word;
+        }
+
+        .table-col-score {
+            width: 7% !important;
+            word-wrap: break-word;
+        }
+
+        .table-col-score-report {
+            align-content: center;
+            align-items: center;
+            display: flex;
+            line-height: 3;
+            padding-right: 10px !important;
+            vertical-align: middle;
+            min-width: 70px;
+            margin-right: 20px;
+        }
+
+        .table-score-td {
+            padding-left: 20px;
+        }
+
+        .table-col-textanswer {
+            width: 50% !important;
+            word-wrap: break-word;
+        }
+
+        .percent-less-middle {
+            color: #D13960;
+        }
+
+        .percent-middle {
+            color: #EDB719;
+        }
+
+        .percent-over-middle {
+            color: #6ECD59;
+        }
+
+        .table-footer {
+            background: #E5EEF5;
+        }
+    }
+
+    .header-information {
+        margin-top: 20px;
+
+        .row-information {
+            margin-bottom: 3px;
+            border-left: 6px solid #0070C0;
+            border-bottom: 1px solid #0070C0;
+            background-color: #f0f8ff;
+        }
+
+        .information-of-survey {
+            font-size: 17px;
+
+            .title {
+                padding-left: 160px;
+            }
+        }
+
+        .question-title {
+            padding: 10px 25px 10px 25px;
+            background: #D2F0FF;
+            font-weight: bold;
+            margin: 10px 0px 5px 0px;
+            word-wrap: break-word;
+        }
+    }
+
+    .canvas-holder {
+        .pie-chart {
+            text-align: center;
+        }
+
+        .chart-note {
+            font-size: 17px;
+            margin-top: 55px;
+
+            .note-title {
+                margin-right: 10px;
+            }
+
+            .icon-title-average {
+                color: #e4d93c;
+            }
+
+            .icon-title-fair {
+                color: #ef8a48;
+            }
+
+            .icon-title-good {
+                color: #5899df;
+            }
+
+            .icon-title-excellent {
+                color: #77ce55;
+            }
+        }
+    }
+
+    .score-table {
+        width: 83%;
+        margin-left: 85px;
+
+        .ranking-average {
+            background-color: #e4d93c;
+        }
+
+        .ranking-fair {
+            background-color: #ef8a48;
+        }
+
+        .ranking-good {
+            background-color: #5899df;
+        }
+
+        .ranking-excellent {
+            background-color: #77ce55;
+        }
+    }
+
+    .col-number {
+        width: 5px !important;
+        padding-right: 10px !important;
+    }
+}

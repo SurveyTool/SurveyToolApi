@@ -1,0 +1,29 @@
+﻿
+.course-session {
+    .general-form {
+        border: none;
+    }
+
+    .course-session-label{
+        margin-top:7px;
+    }
+
+    .coures-session-input{
+        margin-bottom: 10px;
+    }
+
+    .course-session-action {
+        text-align: center;
+    }
+
+    .description {
+        textarea {
+            resize: vertical;
+        }
+    }
+
+    .col-number {
+        width: 5px !important;
+        padding-right: 10px !important;
+    }
+}

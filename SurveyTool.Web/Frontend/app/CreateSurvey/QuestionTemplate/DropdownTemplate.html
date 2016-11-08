@@ -1,0 +1,15 @@
+﻿<div layout="row">
+    
+    <md-input-container md-no-float flex>
+        
+        <input flex="100" placeholder="Option Name" ng-model="option">
+        <md-icon flex  ng-click="removeOption()">
+            <md-tooltip>
+                Delete
+            </md-tooltip>
+        <i class="material-icons">clear</i>
+        </md-icon>
+    </md-input-container>
+    <p ng-show="showError" style="color:red">Option Similar</p>
+</div>
+

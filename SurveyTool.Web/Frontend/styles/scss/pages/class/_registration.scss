@@ -1,0 +1,177 @@
+﻿
+.class-registration {
+
+    .accordion-toggle {
+        outline: none !important;
+    }
+
+    .panel-left {
+        width: calc(100% - 450px);
+        display: inline-block;
+    }
+
+    .panel-right {
+        width: 440px;
+        display:inline-block;
+
+        .mail-icon{
+            margin-right: 30px;
+            min-width: 30px;
+            color: #007db8;
+        }
+    }
+
+    .date {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: #3d3e3f;
+        margin: 0;
+        float: none;
+        display: block;
+        text-decoration: none !important;
+        float: right;
+
+        .clock {
+            color: #007db8;
+
+            &:hover {
+                cursor: default !important;
+            }
+        }
+    }
+
+    .accordion-heading:hover {
+        cursor: default !important;
+        text-decoration: none !important;
+    }
+
+    .registration-uppercase-full-name {
+        text-transform: uppercase;
+    }
+
+    .registration-col-name {
+        min-width: 130px;
+    }
+
+    .registration-col-project {
+        min-width: 70px;
+    }
+
+    .registration-col-position {
+        min-width: 75px;
+    }
+
+    .registration-col-location {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        line-height: 3;
+        padding-right: 10px !important;
+        vertical-align: middle;
+        min-width: 55px;
+        margin-right: 20px;
+    }
+
+    .registration-col-status {
+        width: 95px !important;
+    }
+
+    .general-form {
+        border: none;
+
+        .registration-label {
+            margin-top: 7px;
+        }
+
+        .registration-action {
+            text-align: center;
+        }
+
+        .registration-row {
+            margin-bottom: 10px;
+        }
+
+        .registration-action-file{
+            text-align: center;
+        }
+
+        .btn-file{
+            margin-left: -10px;
+        }
+    }
+
+    .export {
+        margin-right: 15px;
+    }
+
+    .import {
+        margin-right: 15px;
+    }
+
+    .text-color-approve {
+        color: #42D748;
+    }
+
+    .text-color-pendding-approval {
+        color: #F0B51D;
+    }
+
+    .text-color-rejected {
+        color: #DF0238;
+    }
+
+    .popover-content {
+        padding: 2px 6px;
+    }
+
+    .popover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1010;
+        display: none;
+        max-width: 600px;
+        padding: 1px;
+        text-align: center;
+        white-space: nowrap;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box;
+    }
+
+    .dropdown-autocomplete {
+        text-align: left;
+    }
+
+    .col-number {
+        width: 5px !important;
+        padding-right: 10px !important;
+    }
+
+    .col-check-box {
+        width: 61px !important;
+        padding-right: 10px !important;
+    }
+
+    .checkbox input[type="checkbox"]:disabled + label::before,
+    .checkbox input[type="radio"]:disabled + label::before {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+    .checkbox input[type="checkbox"]:checked + label::before, 
+    .checkbox-primary input[type="radio"]:checked + label::before {
+    background-color: #006FC1;
+    border-color: #006FC1;
+}
+}

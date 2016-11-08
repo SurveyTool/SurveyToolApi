@@ -1,0 +1,88 @@
+﻿.section1{
+    width:100%;
+    height:400px;
+    background-color: #629c44;
+    align-content:center;
+    align-items:center;
+}
+.section2{
+
+    align-content:center;
+    align-items:center;
+}
+#sectionTitle{
+    align-items:center;
+    align-content:center;
+}
+#titleSlogan{
+      
+                text-align:center;
+                font-size:60px;
+                margin-top:40px;
+                font-family: inherit;
+ 
+  color: white;
+  text-rendering: optimizelegibility;
+  font-family: 'Open Sans', Arial, sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+            }
+#titleTool{
+    color:white;
+    text-align:center;
+}
+#buttoGetStated
+{
+     color: aliceblue;
+     background-color: #606060;  
+     margin-top:40px;
+     color:#ff6a00; width:200px; height:60px;
+     font-size:20px;
+
+}
+.introducing{
+    margin-left:45%;margin-top:20px;
+}
+
+@import "bourbon";
+
+
+.wrapper {	
+	width:100%
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+
+  .form-signin-heading,
+	.checkbox {
+	  margin-bottom: 30px;
+	}
+
+	.checkbox {
+	  font-weight: normal;
+	}
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+		
+	}
+
+	#usernameLogin {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	#passwordLogin {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+}

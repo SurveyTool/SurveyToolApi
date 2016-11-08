@@ -1,0 +1,120 @@
+﻿.line-top {
+    height: 10px;
+    background-color: #ffffff;
+}
+
+.background-course-catalog {
+    background-color: #f8f8f8;
+}
+
+.trainning-category {
+    margin-top: 20px;
+    line-height: 30px;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    background-color: #1eb2ff;
+    font-size: 17px;
+}
+
+.domain-tree-category {
+    /*overflow: scroll;*/
+    background-color: #ffffff;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.category {
+    background-color: #ffffff;
+    float: left;
+}
+
+.row-course {
+    background-color: #ffffff;
+    margin-bottom: -15px;
+}
+
+.title-available-course {
+    margin-top: 25px;
+    font-weight: bold;
+    color: #0070c0;
+    white-space: nowrap;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.open-classes {
+    color: #3daf2c;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-left: -15px;
+}
+
+.course {
+    float: left;
+    margin-top: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.image-course {
+    border-right: dotted 1px;
+    margin-left: 10px;
+    margin-top: 15px;
+    color: antiquewhite;
+}
+
+.title-course {
+    color: #1eb2ff;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.summary-course {
+    display: inline-block !important;
+    display: -webkit-box !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-right: 10px;
+    height: 57px;
+    text-align: justify !important;
+    text-justify: inter-word !important;
+}
+
+.margin-left-infor-course {
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.line-bottom-row {
+    height: 5px;
+    background-color: #f8f8f8;
+}
+
+[treecontrol] li {
+    position: relative;
+    padding: 20px 0 0 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+    line-height: 20px;
+}
+
+[treecontrol].tree-light li .tree-selected {
+    font-weight: bold;
+    color: #0070c0;
+}
+
+.category-name {
+    overflow-x: auto !important;
+    display: inline-block !important;
+}
+
+.line-distance {
+    line-height: 25px;
+    padding-left: 0px;
+}

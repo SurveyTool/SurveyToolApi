@@ -1,0 +1,141 @@
+﻿
+.time-place {
+    .general-form {
+        border: none;
+
+        .time-place-input-bottom {
+            margin-bottom: 10px;
+        }
+
+        .time-place-label {
+            margin-top: 7px;
+        }
+
+        .form-group-register {
+            margin-right: 0px;
+            margin-left: 0px;
+            margin-bottom: 0px;
+        }
+
+        .meeting-minute {
+            margin-left: -46px;
+        }
+
+        .meeting-minute-unit {
+            vertical-align: -webkit-baseline-middle;
+            margin-left: -8px;
+        }
+    }
+
+    .message {
+        textarea {
+            resize: vertical;
+        }
+    }
+
+    .popover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1060;
+        display: none;
+        max-width: 276px;
+        padding: 1px;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.42857143;
+        text-align: left;
+        white-space: nowrap;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 6px;
+        -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        color: black;
+    }
+
+    .ta-scroll-window > .ta-bind {
+        height: auto;
+        min-height: 150px;
+        padding: 6px 12px;
+    }
+
+    .ta-editor.ta-html, .ta-scroll-window.form-control {
+        min-height: 150px;
+        height: auto;
+        overflow: auto;
+        font-family: inherit;
+        font-size: 100%;
+    }
+
+    .cancel-reason-pionter {
+        cursor: pointer;
+    }
+
+    .send-meeting-mail-title {
+        margin-top: 5px;
+    }
+
+    .btn-toolbar-add-session {
+        display: block !important;
+    }
+
+    .send-meeting-mail-start-time {
+        margin-left: -50px;
+    }
+
+    .send-meeting-mail-end-time {
+        margin-left: -60px;
+    }
+
+    .time-place-action {
+        float: right;
+    }
+
+    .popover-content {
+        padding: 2px 6px;
+    }
+
+    .btn-toolbar {
+        margin-left: -5px;
+        display: none;
+    }
+
+    .courses-class-cancelled {
+        .popover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1060;
+            display: none;
+            max-width: 276px;
+            padding: 1px;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.42857143;
+            text-align: left;
+            white-space: inherit;
+            background-color: #fff;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-radius: 6px;
+            -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+            color: black;
+        }
+    }
+
+    .color-icon-reason {
+        color: blue;
+    }
+
+    .col-number {
+        width: 5px !important;
+        padding-right: 10px !important;
+    }
+}

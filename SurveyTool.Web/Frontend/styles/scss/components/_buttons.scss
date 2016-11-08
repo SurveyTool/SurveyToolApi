@@ -1,0 +1,87 @@
+@mixin setPrimaryButtonStyle($backgroundColor, $color) {
+    background-color: $backgroundColor;
+    color: $color;
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+        color: lighten($color, 10%);
+        background-color: darken($backgroundColor, 10%);
+    }
+}
+
+.btn {
+    border-radius: 0;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-weight: 600;
+    font-size: 16px;
+
+    &:focus {
+        outline: 0;
+    }
+    // Custom Buttons
+    &.btn-primary-gray {
+        @include setPrimaryButtonStyle(#f6f7f8, #333);
+        border-color: #ccc;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+        box-sizing: content-box;
+    }
+
+    &.btn-primary-blue {
+        @include setPrimaryButtonStyle(#1FB2FF, #FFF);
+    }
+
+    &.btn-primary-white {
+        @include setPrimaryButtonStyle(#FFF, #1FB2FF);
+        border: 1px solid darken(#FFF, 15%);
+    }
+
+    &.btn-default {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 14px;
+    }
+
+    &.btn-sm {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 14px;
+    }
+
+    &.btn-secondary {
+        background-color: transparent;
+        color: #0072BF;
+        padding-left: 0;
+        padding-right: 0;
+
+        > .icon {
+            margin-right: 5px;
+        }
+
+        &:hover, &:active, &:focus {
+            border-color: transparent;
+            text-decoration: none;
+            color: #0072BF;
+            border-bottom: 1px solid #0072BF;
+            box-shadow: none;
+        }
+    }
+
+    &.btn-icon-only {
+        background-color: transparent;
+        color: #0072BF;
+        padding-left: 0;
+        padding-right: 0;
+
+        > .icon {
+            margin-right: 5px;
+        }
+
+        &:hover, &:active, &:focus {
+            border-color: transparent;
+            box-shadow: none;
+            text-decoration: none;
+            color: #0072BF;
+        }
+    }
+}

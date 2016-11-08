@@ -1,0 +1,71 @@
+﻿.course-resource {
+
+    .course-resource-action {
+        margin-top: 15px;
+
+        .upload {
+            margin-left: -27px;
+        }
+
+        .upload-file-label {
+            margin-top: 8px;
+            margin-left: -30px;
+            font-weight: normal;
+        }
+
+        .link-name-label {
+            margin-left: -30px;
+            margin-top: 8px;
+            font-weight: normal;
+        }
+
+        .link-label {
+            margin-left: 10px;
+            margin-top: 8px;
+            font-weight: normal;
+        }
+
+        .link-add {
+            margin-left: 10px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            float: left;
+            min-width: 131px;
+            padding: 5px 5px;
+            margin: 1px 15px 0;
+            font-size: 14px;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            background-clip: padding-box;
+            border-radius: 0px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        }
+
+        .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+            color: #262626;
+            text-decoration: none;
+            background-color: #C8C8C8;
+        }
+
+        .btn {
+            &.btn-primary-white {
+                background-color: #FFF !important;
+            }
+        }
+    }
+
+    .course-resource-table {
+        margin-top: 10px;
+    }
+
+    .col-number {
+        width: 5px !important;
+        padding-right: 10px !important;
+    }
+}

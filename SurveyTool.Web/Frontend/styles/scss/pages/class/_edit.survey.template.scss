@@ -1,0 +1,57 @@
+﻿.edit-survey-template {
+    &.line-top {
+        margin-top: 30px;
+    }
+
+    .float-right {
+        float: right;
+    }
+
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .text-area {
+        resize: none;
+    }
+
+    .radio-inline {
+        font-weight: bold;
+    }
+
+    .well {
+        margin-bottom: 11px;
+    }
+
+    .well-template {
+        background: #ebebeb;
+        border-color: #006FC1;
+        border-bottom: hidden;
+        border-top: hidden;
+        border-right: hidden;
+        border-width: thick;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .well-background-color {
+        background-color: white;
+        border: hidden;
+        padding: 10px;
+    }
+
+    .well-margin {
+        padding: 10px 25px;
+        margin: 0px 30px 0px 30px;
+    }
+
+    .radio-inline {
+        padding-left: 40px;
+    }
+
+    .eye-icon {
+        font-size: 19px;
+        margin-top: 6px;
+    }
+}

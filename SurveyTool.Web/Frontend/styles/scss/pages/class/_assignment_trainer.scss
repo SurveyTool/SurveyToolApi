@@ -1,0 +1,264 @@
+﻿$color-score-high: #6ECD59;
+$color-user-high: #DFF2DC;
+$color-score-average: #E1C72A;
+$color-user-average: #FFF4D4;
+$color-score-low: #E00724;
+$color-user-low: #FACDD4;
+
+.assignment-trainer * a {
+    cursor: pointer;
+}
+
+.assignment-trainer * p {
+    word-wrap: break-word;
+}
+
+.assignment-trainer {
+
+    .link-assignment {
+        color: #1EB1FE;
+        text-decoration: underline;
+        font-size: 15px;
+    }
+
+    .custom-form-comment {
+        resize: vertical;
+        line-height: 1;
+        height: 33px;
+        min-height: 33px;
+        max-height: 100px;
+        width: 98%;
+    }
+
+    .assignment-info {
+        background-color: white;
+
+        .title-assignment {
+            color: #006FC1;
+            margin-bottom: 0 !important;
+            margin-top: 0 !important;
+        }
+
+        .small-info {
+            font-style: italic;
+            font-size: 85%;
+        }
+
+        .assignment-info-content {
+            padding-right: 20px;
+            padding-left: 20px;
+
+            .date-assignment {
+
+                .start-date {
+                    font-weight: bold !important;
+                }
+
+                .end-date {
+                    font-weight: bold !important;
+                    color: red !important;
+                }
+            }
+
+            .label-attachment {
+                width: 120px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .info-attachment {
+                padding-left: 15px;
+                display: inline;
+                width: calc(100% - 120px);
+            }
+        }
+    }
+
+    .answers-section {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .title-answer {
+            color: #00813B;
+            font-weight: bold;
+            float: left;
+        }
+
+        .answers-info {
+            padding-right: 20px;
+            padding-left: 20px;
+
+            .header-link {
+
+                .active-link {
+                    font-weight: bold;
+                    font-size: 15px;
+                }
+
+                .number-waiting {
+                    margin-left: 30px;
+                }
+            }
+
+            .answers-body-list {
+                list-style: none;
+                padding-left: 0 !important;
+
+                .answer-li {
+
+                    .color-score-high {
+                        background-color: $color-score-high;
+                    }
+
+                    .color-user-high {
+                        background-color: $color-user-high;
+                    }
+
+                    .color-score-low {
+                        background-color: $color-score-low;
+                    }
+
+                    .color-user-low {
+                        background-color: $color-user-low;
+                    }
+
+                    .color-score-average {
+                        background-color: $color-score-average;
+                    }
+
+                    .color-user-average {
+                        background-color: $color-user-average;
+                    }
+
+                    .color-score-no {
+                        background-color: #C2C2C2;
+                    }
+
+                    .color-user-no {
+                        background-color: #E7E7E7;
+                    }
+
+                    .answer-li-header {
+                        display: flex;
+
+                        .score-box {
+                            width: 77px !important;
+
+                            .score-point {
+                                color: white;
+                                text-align: center;
+                                vertical-align: middle;
+                                font-size: 40px;
+                                font-style: italic;
+                            }
+
+                            .score-question {
+                                color: white;
+                                text-align: center;
+                                vertical-align: middle;
+                            }
+
+                            .icon-question {
+                                font-size: 4.7em;
+                            }
+                        }
+
+                        .user-box {
+                            width: calc(100% - 77px);
+                            padding-left: 15px;
+                            padding-right: 15px;
+                        }
+                    }
+
+                    .answer-li-body {
+                        display: flex;
+
+                        .score-box {
+                            width: 77px !important;
+                        }
+
+                        .answer-li-body-info {
+                            width: calc(100% - 77px);
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            padding-top: 10px;
+                            background-color: #FBFBFB;
+
+                            .comment-section {
+                                display: flex;
+                                padding: 15px;
+
+                                .vertical-bar {
+                                    width: 10px;
+                                    background-color: #E6E6E6 !important;
+                                }
+
+                                .general-form {
+                                    border: none !important;
+                                    height: 170px;
+                                }
+
+                                .comment-box {
+                                    background-color: #F8F8F8 !important;
+                                    padding-left: 10px;
+                                    width: 110%;
+
+                                    .comment-title {
+                                        font-weight: bold;
+                                        margin-right: 10px;
+                                        display: inline;
+                                    }
+
+                                    .give-score {
+
+                                        .score-list {
+                                            font-size: 18px;
+                                            font-weight: bold;
+                                            background-color: white;
+                                            padding-right: 15px !important;
+                                            padding-top: 0 !important;
+                                        }
+
+                                        .score-list.btn {
+
+                                            &.active, &:active, &:focus {
+                                                box-shadow: none;
+                                            }
+
+                                            &.btn-low-score {
+
+                                                &.active, &:hover, &:active {
+                                                    color: $color-score-low;
+                                                }
+                                            }
+
+                                            &.btn-average-score {
+
+                                                &.active, &:hover, &:active {
+                                                    color: $color-score-average;
+                                                }
+                                            }
+
+                                            &.btn-high-score {
+
+                                                &.active, &:hover, &:active {
+                                                    color: $color-score-high;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .control-assignment-trainer{
+                                        margin-top: -15px;
+                                        margin-right: -20px;
+                                    }
+                                }
+                                /*end comment box*/
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

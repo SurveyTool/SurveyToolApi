@@ -1,0 +1,49 @@
+﻿.add-course {
+    .content-secondary-header {
+        margin: 30px 0 30px 0;
+    }
+
+    .course-image {
+        height: 155px;
+        width: 150px;
+        display: inline !important;
+    }
+
+    .general-form {
+        .btn-file {
+            margin-top: 120px;
+            float: right;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .checkbox-add-course {
+        margin-left: -15px;
+
+        .visible {
+            margin-left: 10px;
+        }
+
+        .guest-allowed {
+            margin-left: 25px;
+        }
+    }
+
+    .checkbox {
+        margin-left: 20px;
+        padding-left: 0;
+    }
+
+    .btn-group-add-course {
+        margin-top: 20px;
+        float: right;
+    }
+
+    .textarea-target-trainees {
+        resize: none;
+    }
+}

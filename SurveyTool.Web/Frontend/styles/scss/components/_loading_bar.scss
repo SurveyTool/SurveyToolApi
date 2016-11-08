@@ -1,0 +1,14 @@
+$loading-bar-color: invert($header-background-color);
+
+#loading-bar .bar {
+    background-color: $loading-bar-color;
+}
+
+#loading-bar-spinner .spinner-icon {
+    width: 18px;
+    height: 18px;
+    border: solid 3px transparent;
+    border-top-color: $loading-bar-color;
+    border-left-color: $loading-bar-color;
+    border-radius: 10px;
+}

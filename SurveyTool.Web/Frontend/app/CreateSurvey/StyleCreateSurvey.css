@@ -1,0 +1,65 @@
+﻿#buttonSave{
+  background:#fff;width:10%;height:5%
+}
+.titlePage{
+  margin-left:3%
+}
+#datedStartEnd
+{
+  height:100px
+}
+
+#container { 
+
+  width: 200px; 
+}
+.card{
+  
+    padding:1px,1px,1px,1px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    box-shadow: 0.3px 0.3px 0.3px 1px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+}
+.mainNewSurvey md-tabs md-tabs-canvas {
+      background: #f3f3f3; } 
+.mainNewSurvey md-tabs{
+    margin: auto;
+    background:#EEEEEE;
+    margin-top:-150px;
+    width: 70%;          
+    border-radius: 7px;
+    border:none;
+    font-family: 'Roboto', sans-serif;            
+   
+}
+.buttons {
+  background: #00695C;
+  border: none;
+  box-shadow: -1px -2px 8px -4px #000;
+  height: 45px;
+  color:white;
+  position: relative;
+  font-weight:bold;
+  border: none;
+  outline:none;  
+}
+.button :focus{
+    outline:none;
+}
+#placeHolder::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #666;
+}
+#placeHolderput:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #666;
+}
+#placeHolder::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #666;
+}
+#placeHolder:-ms-input-placeholder,
+#placeHolder:-ms-input-placeholder {
+  color: #666;
+}

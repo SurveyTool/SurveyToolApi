@@ -1,0 +1,212 @@
+﻿.participant {
+    .btn-toolbar {
+        .btn {
+            margin-left: 15px !important;
+        }
+    }
+
+    .general-form {
+        border: none;
+    }
+
+    .participant-col-name {
+        min-width: 120px;
+    }
+
+    .participant-col-project {
+        min-width: 80px;
+    }
+
+    .participant-col-position {
+        min-width: 90px;
+    }
+
+    .participant-col-manager {
+        min-width: 120px;
+    }
+
+    .participant-col-location {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        line-height: 3;
+        min-width: 50px;
+        padding-right: 10px !important;
+        vertical-align: middle;
+        min-width: 55px;
+        margin-right: 20px;
+    }
+
+    .attendance-percent {
+        padding-left: 50px;
+    }
+
+    .participant-col-session {
+        min-width: 55px;
+    }
+
+    .participant-col-attendance {
+        min-width: 120px;
+    }
+
+    .session-point {
+        cursor: pointer;
+    }
+
+    .general-form {
+        .participant-action-file {
+            text-align: center;
+        }
+
+        .btn-file {
+            margin-left: -10px;
+        }
+    }
+
+    .participant-action {
+        text-align: right;
+    }
+
+    .comment-not-null {
+        color: #E1C72A;
+
+        &.btn {
+            &.btn-icon-only {
+                &:hover {
+                    color: #E1C72A;
+                }
+            }
+        }
+    }
+
+    .comment-null {
+        color: #0072BF;
+
+        &.btn {
+            &.btn-icon-only {
+                &:hover {
+                    color: #0072BF;
+                }
+            }
+        }
+    }
+
+    .btn-comment {
+        margin: -25px 38px 0 0;
+        float: right;
+    }
+
+    .popover-title {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .fa {
+        font-size: smaller;
+    }
+
+    .comment-content {
+        text-align: center;
+
+        textarea {
+            resize: vertical;
+        }
+
+        .comment-content-text {
+            word-wrap: break-word;
+        }
+    }
+
+    .disable-href {
+        pointer-events: none;
+    }
+
+    .col-number {
+        width: 5px !important;
+        padding-right: 10px !important;
+    }
+}
+
+.session-attendance-report {
+    .text-header-email-report {
+        color: #0072BF;
+        font-size: 15px;
+        font-weight: 600;
+        vertical-align: middle;
+        margin-top: 7px !important;
+        margin-bottom: 7px !important;
+
+        .only {
+            color: red;
+        }
+
+        .email {
+            text-decoration: underline;
+        }
+    }
+    .toEmail-text-area {
+        resize: vertical;
+    }
+    .ccEmail-text-area {
+        resize: vertical;
+    }
+
+    .no-session {
+        color: red;
+    }
+
+    .report-coursename {
+        color: #70AD47;
+        font-weight: bold;
+        font-family: "Tahoma",sans-serif;
+    }
+
+    #table-report {
+
+        th {
+            width: 17% !important;
+            background-color: #A8D08D;
+            text-align: center;
+            font-weight: bold;
+            font-family: "Tahoma",sans-serif;
+            color: #1F4E79;
+            font-weight: bold;
+        }
+
+        .info-detail {
+            color: #0072BF;
+            font-size: 15px;
+            font-weight: 600;
+            vertical-align: middle;
+        }
+
+        #table-violated-participant {
+            thead {
+                tr {
+                    background-color: #F4B083;
+                    font-family: "Tahoma",sans-serif;
+                    color: #1F4E79;
+                    font-weight: bold;
+                }
+            }
+
+            .report-detail-absent {
+                color: red;
+            }
+        }
+
+        .report-detail-undefined {
+            color: red;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    .report-action {
+        text-align: right;
+    }
+
+    .popover-content {
+        padding: 2px 6px;
+    }
+}

@@ -1,0 +1,223 @@
+﻿.my-teaching-class {
+    $gray-light-color: #EEEEEE;
+    $gray-color: #575755;
+    $yellow-light-color: #fbfbd0;
+    $yellow-color: #ebd114;
+
+    .search-box {
+        .search-input {
+            border-bottom: 1px solid #D7D7D7;
+            margin-top: 5px;
+            color: #7DB6E0;
+            line-height: initial;
+        }
+    }
+
+    .btn-sort-my-class {
+        float: right;
+        margin-right: -10px;
+    }
+
+    .my-class-controls {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    .button, input, optgroup, select, textarea {
+        color: #006FC1;
+    }
+
+    .notification-no-data {
+        padding: 4px;
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .item-my-class {
+        position: relative;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        box-shadow: 2px 2px 5px grey;
+
+        .col-index {
+            left: 0;
+            position: absolute;
+            height: 100%;
+            width: 8px;
+            top: 0;
+        }
+
+        .image-margin-top {
+            margin-top: auto;
+
+            img {
+                width: 100px;
+                height: 105px;
+            }
+        }
+
+        .infor-my-class {
+            display: flex;
+            margin-bottom: 5px;
+            align-items: baseline;
+            margin-left: 15px;
+            min-height: 110px;
+
+            .label-status {
+                color: white !important;
+                border-radius: 2px;
+                line-height: 1.6;
+                font-weight: 400;
+                display: inline-block;
+                min-width: 10px;
+                padding: 3px 7px;
+                font-size: 14px;
+                color: #fff;
+                vertical-align: baseline;
+                white-space: nowrap;
+                text-align: center;
+
+                &.item-background-up-coming-color {
+                    background-color: #6ECD59;
+                }
+
+                &.item-background-on-going-color {
+                    background-color: #f6a926;
+                }
+
+                &.item-background-done-color {
+                    background-color: #1f8fc1;
+                }
+
+                &.item-background-cancel-color {
+                    background-color: darkgray;
+                }
+            }
+
+            .infor-domain-name {
+                color: #696F7B;
+                margin-bottom: 10px;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .infor-note-class {
+                color: black;
+                font-size: 15px;
+            }
+
+            .color-next-session {
+                font-size: 15px;
+                color: #F7A14A;
+                bottom: 0px;
+            }
+
+            .font-italic {
+                font-style: italic;
+            }
+
+            .status-cancelled {
+                font-size: 14px;
+            }
+
+            .date-time-class {
+                font-size: 14px;
+                font-weight: normal;
+                color: black;
+                text-align: right;
+            }
+
+            .infor-trainer {
+                float: right;
+                margin-right: 30px;
+
+                #slides_control {
+                    width: 200px;
+                    margin-right: -45px;
+                }
+
+                .row-trainer {
+                    display: inline-block;
+                    margin-top: 5px;
+                    padding-left: 15px;
+
+                    .trainer-have-avatar {
+                        margin-right: 20px;
+                    }
+
+                    .carousel-indicators {
+                        bottom: 10px;
+                        display: none;
+                    }
+
+                    .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right,
+                    .carousel-control .icon-prev, .carousel-control .icon-next {
+                        font-size: 15px;
+                        height: 30px;
+                        margin-top: -10px;
+                        width: 80px;
+                        color: #0493fb;
+                    }
+
+                    .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+                        margin-right: -5px;
+                    }
+
+                    .carousel-control.left {
+                        background-image: none;
+                    }
+
+                    .carousel-indicators .active {
+                        background-color: #D7D7D7;
+                        height: 12px;
+                        margin: 0;
+                        width: 12px;
+                    }
+
+                    .carousel-control.right {
+                        background-image: none;
+                        background-repeat: repeat-x;
+                        left: auto;
+                        right: 0;
+                    }
+
+                    .trainer-image {
+                        margin-left: auto;
+                        margin-right: auto;
+                        display: inherit;
+                    }
+
+                    .trainer-name {
+                        text-align-last: center;
+                        width: 100%;
+                        color: #696F7B;
+                        font-size: 11px;
+                        font-weight: 600;
+
+                        &.text-uppercase {
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    img {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    .carousel-indicators {
+                        bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .cursor-view-activites {
+            cursor: pointer;
+        }
+    }
+}

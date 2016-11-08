@@ -1,0 +1,9 @@
+﻿<div class="drop" ng-show="VisibleQuestion">
+    <p id="titlequestion">{{data.questionNumber}}. {{data.questionName}} <span ng-show="Required" style="color:red">*</span></p>
+    <div id="optionQuestion" >
+        <p ng-show="showRequired" style="color:red">Please choice option.</p>
+        <md-checkbox ng-repeat="item in data.dataOption" ng-checked="exists(item, selected)" ng-click="toggle(item, selected)" layout="column">
+            {{ item.label }}
+        </md-checkbox>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+﻿<div ng-show="VisibleQuestion">
+    <p id="titlequestion">{{data.questionNumber}}. {{data.questionName}} <span ng-show="Required" style="color:red">*</span></p>
+    <div id="optionQuestion">
+        <p ng-show="showRequired" style="color:red">Please enter answer.</p>
+        <md-input-container >
+            <input ng-model="dataChoice" />
+        </md-input-container>
+    </div>
+</div>

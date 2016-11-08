@@ -1,0 +1,16 @@
+﻿
+<div ng-show="VisibleQuestion">
+    <p id="titlequestion">{{data.questionNumber}}. {{data.questionName}} <span ng-show="Required" style="color:red">*</span></p>
+    <div id ="optionQuestion">
+        <p ng-show="showRequired" style="color:red">Please choice option.</p>
+    <md-radio-group ng-model="dataChoice" class="md-primary">
+
+        <md-radio-button ng-repeat="d in data.dataOption" ng-value="d.label">
+
+            {{ d.label }}
+
+        </md-radio-button>
+
+    </md-radio-group>
+   </div>
+</div>

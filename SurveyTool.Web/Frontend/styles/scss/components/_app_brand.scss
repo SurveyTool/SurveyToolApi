@@ -1,0 +1,14 @@
+﻿$app-title-color: $header-primary-font-color;
+$app-title-size: 24px;
+$app-title-weight: 400;
+
+.app-brand {
+	padding-left: 0;
+
+	.app-title {
+		color: $app-title-color;
+		font-weight: $app-title-weight;
+		font-size: $app-title-size;
+		margin-left: 10px;
+	}
+}

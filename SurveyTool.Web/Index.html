@@ -1,0 +1,175 @@
+﻿<!doctype html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="utf-8">
+    <title>Survey Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css Frontend/styles/vendor.css -->
+
+    <link href="Frontend/styles/icon.css" rel="stylesheet" />
+
+    <link href="Frontend/vendors/angular-material/angular-material.css" rel="stylesheet" />
+    <link href="Frontend/vendors/angular-material/layouts/angular-material.layouts.css" rel="stylesheet" />
+    <link href="Frontend/vendors/angular/angular-csp.css" rel="stylesheet" />
+    <link href="Frontend/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Frontend/vendors/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Frontend/styles/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="Frontend/vendors/tableexport.js/dist/css/tableexport.min.css" rel="stylesheet" />
+    <link href="Frontend/vendors/novus-nvd3-ebdf08b/build/nv.d3.min.css" rel="stylesheet" />
+    <!--<link href="Frontend/vendors/angular-bootstrap-datetimepicker/src/css/datetimepicker.css" rel="stylesheet" />-->
+    <!-- endbuild -->
+    <!-- build:css Frontend/styles/main.css -->
+
+    <link href="Frontend/styles/scss/pages/master/StyleSheet.css" rel="stylesheet" />
+    <link href="Frontend/styles/scss/pages/master/Icon.css" rel="stylesheet" />
+    <link href="Frontend/app/Home/HomeStyle.css" rel="stylesheet" />
+    <link href="Frontend/app/Dasboard/normalize.css" rel="stylesheet" />
+    <link href="Frontend/app/Dasboard/style.css" rel="stylesheet" />
+    <link href="Frontend/app/CreateSurvey/StyleCreateSurvey.css" rel="stylesheet" />
+    <link href="Frontend/app/Register/RegisterStyle.css" rel="stylesheet" />
+    <link href="Frontend/app/ConductionSurvey/style.css" rel="stylesheet" />
+    <link href="Frontend/app/ResultSurvey/StyleResultSurvey.css" rel="stylesheet" />
+    <link href="Frontend/styles/scss/pages/master/socialize-bookmarks.css" rel="stylesheet" />
+    <!-- endbuild -->
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0pt;
+        }
+
+        .Frame {
+            display: table;
+            height: 100%;
+            width: 100%;
+        }
+
+        .Row {
+            display: table-row;
+            height: 1px;
+        }
+
+            .Row.Expand {
+                height: 100%;
+            }
+    </style>
+</head>
+<body class="Frame">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <div ng-controller="MasterController" class="Row">
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="height:40px; color:aliceblue; background-color:#5F5F5F; border-color:#7a7a7a">
+
+            <div class="navbar-header" id="labelHome">
+                <a style="color:white" class="navbar-brand" href="#home">
+                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+
+                <ul class="nav navbar-nav navbar-right">
+            
+
+                    <li ng-show="notLogin" id="labelRegisters">
+                        <a href="#register">
+                            <i class="fa fa-sign-in fa-lg"  aria-hidden="true"></i> 
+                            Sign Up
+                        </a>
+                    </li>
+                    <li ng-show="notLogin" ng-click="showLogin($event)" id="labelLogins"><a><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
+                    <li ng-show="Logged" id="logged" ng-click="clickUser()">
+                        <a style="font-size:13px">{{nameUser}}<i style="margin-left:2px" class="fa fa-futbol-o fa-lg" aria-hidden="true"></i></a>
+                    </li>
+                    <li ng-show="Logged" ng-click="logoutUser()" style="border-left:solid 1px white" id="labelHome"><a><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+
+    <div class="Row Expand" style="margin-top:50px;width:100%" ng-view></div>
+    <!-- build:js Frontend/scripts/vendor.js -->
+    <footer class="Row" style="height:50px">
+       
+        <section id="footer_2" >
+            <div class="container" >
+                <div class="row" layout="row" >
+                   
+                        <ul id="footer-nav">
+                            <li>Copyright© TMA Solution  TMA Solutions Corporate Intranet – Survey Tool | For questions, suggestions or bug reports please call 5xxx</li>                        
+                        </ul>
+                     <div style="text-align:center">
+                        <ul class="social-bookmarks clearfix">
+                            <li class="facebook"><a href="#">facebook</a></li>
+                            <li class="googleplus"><a href="#">googleplus</a></li>
+                            <li class="twitter"><a href="#">twitter</a></li>
+                            <li class="delicious"><a href="#">delicious</a></li>
+                            <li class="paypal"><a href="#">paypal</a></li>
+                        </ul>
+                    </div>
+                   
+                </div>
+
+            </div>
+        </section>
+
+    </footer>
+
+
+    <script src="Frontend/vendors/angular/angular.js"></script>
+    <script src="Frontend/vendors/angular-route.min.js"></script>
+    <script src="Frontend/vendors/angular-animate.min.js"></script>
+    <script src="Frontend/vendors/angular-aria.min.js"></script>
+    <script src="Frontend/vendors/angular-messages.min.js"></script>
+    <script src="Frontend/vendors/angular-cookies.min.js"></script>
+
+    <script src="Frontend/vendors/svg-assets-cache.js"></script>
+    <script src="Frontend/vendors/angular-material/angular-material.js"></script>
+    <script src="Frontend/vendors/jquery/dist/jquery.js"></script>
+    <script src="Frontend/vendors/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="Frontend/vendors/ng-draggable-widgets.js"></script>
+
+    <script src="Frontend/vendors/js-xlsx/dist/xlsx.full.min.js"></script>
+
+    <script src="Frontend/vendors/Blob/Blob.js"></script>
+    <script src="Frontend/vendors/file-saver.js/FileSaver.js"></script>
+
+    <script src="Frontend/vendors/tableexport.js/dist/js/tableexport.min.js"></script>
+
+    
+
+    <script src="Frontend/vendors/novus-nvd3-ebdf08b/build/d3.min.js"></script>
+    <script src="Frontend/vendors/novus-nvd3-ebdf08b/build/nv.d3.min.js"></script>
+
+    <script src="Frontend/vendors/novus-nvd3-ebdf08b/build/angular-nvd3.min.js"></script>
+    <!--<script src="Frontend/vendors/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>-->
+    
+    <!-- endbuild -->
+    <!-- build:js Frontend/scripts/scripts.js -->
+    <script src="Frontend/app/app.js"></script>
+    <script src="Frontend/app/app.route.js"></script>
+    <script src="Frontend/app/services/authentication.service.js"></script>
+   
+    <script src="Frontend/app/services/ShareController.js"></script>
+    <script src="Frontend/app/MasterController.js"></script>
+    <script src="Frontend/app/Home/HomeController.js"></script>
+    <script src="Frontend/app/Home/ServicesHome.js"></script>
+    <script src="Frontend/app/Dasboard/DasboardController.js"></script>
+    <script src="Frontend/app/Dasboard/ServicesDasboard.js"></script>
+    <script src="Frontend/app/CreateSurvey/CreateSurveyController.js"></script>
+    <script src="Frontend/app/CreateSurvey/CreateSurveyServices.js"></script>
+    <script src="Frontend/app/Register/RegisterController.js"></script>
+    <script src="Frontend/app/Register/ServicesRegister.js"></script>
+    <script src="Frontend/app/CreateSurvey/CreateSurveyServices.js"></script>
+    <script src="Frontend/app/ConductionSurvey/ConductionSurveyController.js"></script>
+    <script src="Frontend/app/ConductionSurvey/ServicesGetDataSurvey.js"></script>
+    <script src="Frontend/app/ResultSurvey/ResultSurveyController.js"></script>
+   
+   
+    <!-- endbuild -->
+</body>
+</html>

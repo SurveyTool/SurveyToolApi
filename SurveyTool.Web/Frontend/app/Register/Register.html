@@ -1,0 +1,144 @@
+﻿<div ng-controller="RegisterController" layout="column" ng-cloak="" class="md-inline-form inputdemoBasicUsage" style="background:#EEEEEE;margin-top:50px">
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li class="active">Register</li>
+
+    </ol>
+    <section class="form" flex-order="2" flex-gt-sm="75" flex-gt-md="50" flex-gt-lg="20" layout-padding style="margin-left:7%;margin-right:7%">
+        <fieldset>
+            <div class="tieude">
+                <h2>Register</h2>
+            </div>
+            <md-content layout-padding="" style="background:#EEEEEE">
+                <md-card>
+                    <form id="regForm" flex flex-order="1" name="regForm">
+
+                        <div layout-gt-sm="row">
+                            <md-icon style="height:7%"> <i class="material-icons md-36">account_box</i></md-icon>
+                            <md-input-container class="md-block" flex-gt-sm="" id="sectionField" style="margin-left:10px">
+                                <label for="fname" style="font-size:18px">First Name</label>
+                                <input style="border-bottom-color:#629c44" aria-label="First Name" name="fname" ng-model="fname" required ng-required="true" minlength="1" ng-maxlength="80">
+                                <div ng-show="regForm.fname.$touched && regForm.fname.$invalid" ng-messages="regForm.fname.$error">
+                                    <div ng-show="regForm.fname.$error.required" ng-message="required">Required.</div>
+                                </div>
+                            </md-input-container>
+
+                            <md-input-container class="md-block" flex-gt-sm="">
+                                <label for="lname" style="font-size:18px">Last Name</label>
+                                <input style="border-bottom-color:#629c44" aria-label="Last Name" name="lname" ng-model="lname" required ng-required="true" minlength="1" ng-maxlength="80">
+                                <div ng-show="regForm.lname.$touched && regForm.lname.$invalid" ng-messages="regForm.lname.$error">
+                                    <div ng-show="regForm.lname.$error.required" ng-message="required">Required.</div>
+                                </div>
+                            </md-input-container>
+                        </div>
+                        <div layout-gt-sm="row">
+                            <md-icon style="height:7%"><i class="material-icons md-36">account_circle</i></md-icon>
+                            <md-input-container class="md-block" flex-gt-sm="" id="sectionField" style="margin-left:10px">
+                                <label for="lname" style="font-size:18px">User Name</label>
+
+                                <input style="border-bottom-color:#629c44" ng-keyup="checkExistsUerName()" aria-label="User Name" name="uname" ng-model="uname" required ng-required="true" maxlength="30" md-maxlength="30">
+                                <div ng-show="regForm.uname.$touched && regForm.uname.$invalid" ng-messages="regForm.uname.$error">
+                                    <div ng-show="regForm.uname.$error.required" ng-message="required">Required.</div>
+                                </div>
+                                <p style="color:red;font-size:12px">{{varibaleCheckExistsUserName}}</p>
+                            </md-input-container>
+                        </div>
+                        <div layout-gt-sm="row">
+                            <md-icon style="height:7%"> <i class="material-icons md-36">lock</i></md-icon>
+                            <md-input-container class="md-block" flex-gt-sm="" id="sectionField" style="margin-left:10px">
+                                <label for="pass" style="font-size:18px">Password</label>
+
+                                <input style="border-bottom-color:#629c44" aria-label="Password" name="pass" type="password" ng-model="pass" required ng-required="true" maxlength="512" md-maxlength="512">
+                                <div ng-show="regForm.pass.$touched && regForm.pass.$invalid" ng-messages="regForm.pass.$error">
+                                    <div ng-show="regForm.pass.$error.required" ng-message="required">Required.</div>
+                                </div>
+                            </md-input-container>
+
+                            <md-input-container class="md-block" flex-gt-sm="">
+                                <label for="cpass" style="font-size:18px">Confirm Password</label>
+                                <input style="border-bottom-color:#629c44" ng-keyup="checkPassword()" aria-label="Confirm Password" name="cpass" type="password" ng-model="cpass" required ng-required="true" maxlength="512" md-maxlength="512">
+
+                                <div ng-show="regForm.cpass.$touched && regForm.cpass.$invalid" ng-messages="regForm.cpass.$error">
+                                    <div ng-show="regForm.cpass.$error.required" ng-message="required">Required</div>
+                                    
+                                </div>
+                                <p style="font-size:12px;color:#ff0000">{{checkPass}}</p>
+                            </md-input-container>
+                        </div>
+
+
+                        <div layout-gt-sm="row">
+                            <md-icon style="height:7%"> <i class="material-icons md-36">email</i></md-icon>
+                            
+                                <md-input-container class="md-block" flex-gt-sm="" id="sectionField" style="margin-left:10px">
+
+                                    <label for="email" style="font-size:18px">Email</label>
+
+                                    <input ng-keyup="checkExistsEmail()" style="border-bottom-color:#629c44" aria-label="Email" name="email" type="email" ng-model="email" required ng-required="true" ng-blocklist="@test.com,@sample.com,@example.com" p placeholder="ipsum@lorem.com">
+                                    <div ng-show="regForm.email.$touched && regForm.email.$invalid" ng-messages="regForm.email.$error">
+                                        <div ng-show="regForm.email.$error.required" ng-message="required">Required.</div>
+                                        
+                                    </div>
+                                    <p style="color:red;font-size:12px">{{varibaleCheckExistsEmail}}</p>
+                                </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm="">
+                                    <label for="remail" style="font-size:18px">Re-Email</label>
+                                    <input style="border-bottom-color:#629c44" ng-keyup="checkEmail()" aria-label="Re-Email" name="remail" type="email" ng-model="remail" required ng-required="true" ng-blocklist="@test.com,@sample.com,@example.com" placeholder="ipsum@lorem.com">
+                                    <div ng-show="regForm.remail.$touched && regForm.remail.$invalid" ng-messages="regForm.remail.$error">
+                                        <div ng-show="regForm.remail.$error.required" ng-message="required">Required.</div>
+                                    </div>
+                                    <p style="font-size:12px;color:#ff0000">{{checkemail}}</p>
+                                </md-input-container>
+</div>
+                        <div layout-gt-sm="row">
+                            <md-icon style="height:7%"> <i class="material-icons md-36">phone</i></md-icon>
+                            <md-input-container class="md-block" flex-gt-sm="" id="sectionField" style="margin-left:10px">
+                                <label style="font-size:18px">Phone</label>
+
+                                <input style="border-bottom-color:#629c44" type="number" data-ng-change="numberOnly()" ng-model="phone" required="">
+
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm="">
+
+                                <label style="font-size:18px">Company</label>
+                                <input style="border-bottom-color:#629c44" ng-model="company">
+                            </md-input-container>
+
+
+                        </div>
+                        <div layout-gt-sm="row">
+
+                            <md-datepicker style="border-bottom-color:#629c44" flex='50' ng-model="birthday" md-placeholder="Birthday">
+                            </md-datepicker>
+
+                            <md-input-container class="md-block" flex-gt-sm="">
+                                <label style="font-size:18px">Gender</label>
+                                <md-select style="border-bottom-color:#629c44" ng-model="gender">
+                                    <md-option ng-repeat="gender in genders" value="{{gender.abbrev}}">
+                                        {{gender.abbrev}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+
+
+                        </div>
+                        <p style="font-size:15px;color:red">{{statusRegister}}</p>
+                        <div layout="row" layout-wrap>
+                            <div flex='80'>
+                                <p>  </p>
+                            </div>
+                            <div class="button1" flex='10'>
+                                <md-button class="md-raised md-primary" style="background:#629c44"><a href="#" style="color:#000000">Cancel</a></md-button>
+                            </div>
+                            <div flex='10'>
+                                <md-button class="md-raised md-primary" style="background:#629c44" ng-click="SubmitRegisterAccount()">Sign Up </md-button>
+
+                            </div>
+                          
+                        </div>
+                    </form>
+                </md-card>
+                </md-content>
+        </fieldset>
+    </section>
+</div>

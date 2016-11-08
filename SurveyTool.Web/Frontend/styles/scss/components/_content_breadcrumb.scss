@@ -1,0 +1,38 @@
+.content-breadcrumb {
+	.breadcrumb {
+	    margin: 0;
+	    background-color: transparent;
+	    padding: 0;
+
+	    > i {
+	    	color: $app-link-font-color;
+    	    font-size: 19px;
+	    }
+
+	    > li {
+	    	margin: 0px 5px;
+
+	    	a {
+	    		@extend .content-primary-header;
+	    		padding-bottom: 5px;
+
+	    		&:hover {
+	    			text-decoration: none;
+	    			border-bottom: 1px solid $app-link-font-color;
+	    		}
+	    	}
+	    }
+
+	    &:first-child {
+	    	margin-left: 0;
+	    }
+
+	    > li.active {
+	    	a {
+	    		&:hover {
+	    			border-bottom: none;
+	    		}
+	    	}
+	    }
+	}
+}

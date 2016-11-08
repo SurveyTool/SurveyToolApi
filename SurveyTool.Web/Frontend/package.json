@@ -1,0 +1,21 @@
+{
+  "name": "frontend",
+  "private": true,
+  "devDependencies": {
+        "bower": "~1.2.8",
+        "grunt": "~0.4.2",
+        "matchdep": "",
+        "grunt-contrib-jshint": "",
+        "grunt-contrib-copy": "",
+        "grunt-contrib-clean": "",
+        "grunt-contrib-watch": "",
+        "grunt-contrib-cssmin": "",
+        "grunt-usemin": "",
+        "grunt-filerev": "",
+        "grunt-contrib-concat": "",
+        "grunt-contrib-uglify": "",
+        "grunt-express":  "",
+        "grunt-open": "",
+        "grunt-parallel":  ""
+  }
+}

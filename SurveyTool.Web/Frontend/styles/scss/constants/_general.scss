@@ -1,0 +1,16 @@
+﻿$app-background-color: #fff;
+$app-font: "Century Gothic";
+$app-font-size: 13px;
+$memu-background-focus:#0070c0;
+$boder-gray-color:#CCCCCC;
+$app-backgroud-gray-color:#F9F9F9;
+
+@mixin SetFontSize($font, $size) {
+    font-family:    $font;
+    font-size:      $size;
+}
+
+@mixin SetSize($height, $width) {
+    height:    $height;
+    width:      $width;
+}

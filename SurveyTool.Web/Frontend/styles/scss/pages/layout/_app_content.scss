@@ -1,0 +1,27 @@
+$well-dividing-line: 1px solid #D7D7D7;
+
+.app-content {
+    @extend .app-side-padding;
+    min-height: 500px;
+    margin-bottom: 30px;
+
+    .content-header {
+        .context-menu {
+            margin: 0 10%;
+            position: relative;
+            z-index: 3;
+        }
+
+        .content-breadcrumb {
+            margin-top: 2.5%;
+        }
+    }
+
+    .well {
+        background-color: transparent;
+        border: $well-dividing-line;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}

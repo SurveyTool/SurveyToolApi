@@ -1,0 +1,170 @@
+﻿<div ng-controller="CreateSurveyController as ctrl" style="background:#EEEEEE; margin-top:49px" class="mainNewSurvey">
+    <ul class="pager" style="position:fixed">
+        <li class="previous"><a href="#dasboard"><span aria-hidden="true">&larr;</span>Back Dasboard</a></li>
+    </ul>
+        <div layout="row" flex style="background:#629c44;height:300px; align-items: flex-start;">
+            <div flex="initial" layout-align="start center" class="titlePage">
+                <h1 style="color:#fff;"></h1>
+            </div> <!-- chứa title page-->
+            <div flex layout-align="end center" layout="row" style="margin-right:3%">
+                <md-button id="buttonSave" style="height:50px;width:40px;position:fixed;margin-top:50px" class="md-raised md-primary" ng-click="saveSurvey()">
+                    <md-tooltip>
+                        Save Survey
+                    </md-tooltip> 
+                    SAVE
+                </md-button>
+                <div ng-repeat="contentss in listHTMLPage" ng-bind-html="contentss"></div>
+            </div><!-- chưa button save-->
+        </div> <!-- layout chứa button save và tên trang create survey-->
+        <md-content style="position:fixed;right:11%;background:#EEEEEE" ng-show="showTabNewItem">
+            <md-card>
+                <md-button aria-label="question" ng-click="newQuestion()" class="md-fab md-raised md-mini">
+                    <md-tooltip>
+                        New Question
+                    </md-tooltip>
+                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                </md-button>
+                <md-button aria-label="page" ng-click="newPage()" class="md-fab md-raised md-mini">
+                    <md-tooltip>
+                        New Section
+                    </md-tooltip>
+                    <i class="fa fa-file-text" aria-hidden="true"></i>
+                </md-button>
+            </md-card>
+        </md-content>
+
+
+
+
+        <md-tabs md-dynamic-height class="md-primary" md-border-bottom md-center-tabs style="background:#EEEEEE">
+            <md-tab label="Content" style="margin-left:auto;margin-right:auto;background:#EEEEEE" md-on-select="clickTab1()">
+                <div layout="column" style="margin-left:auto;margin-right:auto;">
+                    <!-- layout chứa câu hỏi tên survey và button chọn new question new page-->
+                    <div class="card" style="background:#fff;padding-top:10px">
+                        <div style="margin-left:auto;margin-right:auto;width:90%;background:#fff">
+                            <div>
+                                <div>
+                                    <md-input-container md-no-float class="md-block" style="height:35px">
+
+                                        <input id="placeHolder" placeholder="Title Survey" style="font-size:25px" ng-model="title">
+                                    </md-input-container>
+                                    <md-input-container md-no-float class="md-block">
+
+                                        <textarea id="placeHolder" placeholder="Discription Survey" style="font-size:20px" ng-model="discription" md-maxlength="150" md-select-on-focus></textarea>
+                                    </md-input-container>
+                                    <md-input-container md-no-float class="md-block">
+                                        <textarea id="placeHolder" placeholder="Message end survey" style="font-size:20px" ng-model="endsurvey" md-maxlength="150" md-select-on-focus></textarea>
+                                    </md-input-container>
+                                    <p style="font-size:20px;margin-left:3px">Duration survey</p>
+                                    <div layout="row" style="margin-left:auto;margin-right:auto;align-self:center">
+                                        <md-datepicker ng-model="datestart" id="datedStartEnd" md-placeholder="Date Start"></md-datepicker>
+                                        <md-datepicker ng-model="deadline" md-placeholder="Deadline"></md-datepicker>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- chưa tên survey-->
+                    </div>
+                    <div id="pageContainer" layout="column"></div>
+                    <!-- chứa 2 button new question và new page -->
+                </div>
+            </md-tab>
+            <md-tab label="Setting" style="background:#fff" md-on-select="clickTab2()">
+                <div style="margin-left:auto;margin-right:auto">
+                    <md-content style="">
+                        <md-card>
+                            <div layout="row" style="align-content:center">
+                                <p style="font-size:18px;margin-left:3%;text-align:center;margin-top:auto;margin-bottom:auto">Allows additional survey again: </p>
+                                <md-switch style="margin-left:4px" ng-model="choiceAddAnother" aria-label="Switch 2" ng-true-value="'Yes'" ng-false-value="'No'" class="md-warn"></md-switch>
+                            </div>
+                            <div layout="row" style="margin-top:20px">
+                                
+                                <md-input-container md-no-float style="margin-left:4px;" layout="row" flex> 
+                                    <p flex="20" style="font-size:18px;margin-left:3%;margin-top:auto;margin-bottom:auto">Limit the number of respondents.</p>
+                                    <input flex="20" type="number" placeholder="Enter number people" data-ng-change="numberOnly()" ng-model="numberPerson" />
+                                </md-input-container>
+                            </div>
+                        </md-card>
+                    </md-content>
+                    <!-- chứa datestart deadline và list email-->
+                </div>
+            </md-tab>
+        </md-tabs>
+        <script type="text/ng-template" id="dialog1.tmpl.html">
+
+            <md-dialog aria-label="Info Survey" ng-cloak style="width:50%">
+                <form>
+                    <md-toolbar>
+                        <div class="md-toolbar-tools">
+                            <h2>Info Survey</h2>
+
+                        </div>
+                    </md-toolbar>
+                    <md-dialog-content style="margin:auto;width:80%">
+
+
+                        <p class="md-title">Share</p>
+                        <div class="md-padding" layout="column" style="width:auto;margin:auto" ng-controller="ChipController as ctrlc">
+                            <md-chips ng-model="ctrlc.tags" md-separator-keys="ctrlc.keys" placeholder="Enter the email to share"></md-chips>
+                        </div>
+
+                        <md-input-container style="width:100%">
+                            <label>Subject message</label>
+                            <input ng-model="chude" />
+                        </md-input-container>
+                        <md-input-container style="width:100%">
+                            <label>Content message</label>
+                            <input ng-model="tinnhan" />
+                        </md-input-container>
+                    </md-dialog-content>
+
+                    <md-dialog-actions layout="row">
+
+                        <span flex></span>
+
+                        <md-button ng-click="cancel()">
+                            Cancel
+                        </md-button>
+                        <md-button ng-click="send()" style="color:green">
+                            SEND
+                        </md-button>
+                    </md-dialog-actions>
+                </form>
+            </md-dialog>
+        </script>
+        <script type="text/ng-template" id="dialogSuccess">
+
+            <md-dialog aria-label="Info Survey" ng-cloak style="width:50%">
+                <form>
+                    <md-toolbar>
+                        <div class="md-toolbar-tools">
+                            <h2>Noitfy</h2>
+
+                        </div>
+                    </md-toolbar>
+                    <md-dialog-content style="margin:auto;width:80%;font-size:20px">
+
+                        <p>Survey was saved sccuess</p>
+                        <p>Link :{{linkSurvey}}</p>
+
+                    </md-dialog-content>
+
+                    <md-dialog-actions layout="row">
+
+                        <span flex></span>
+
+
+                        <md-button ng-click="ok()" style="color:green">
+                            OK
+                        </md-button>
+                    </md-dialog-actions>
+                </form>
+            </md-dialog>
+        </script>
+
+
+
+
+</div>

@@ -1,0 +1,42 @@
+﻿<div ng-controller="ConductionSurveyController" style="background:#EEEEEE">
+    <h1  id="messageError" style="color:red;text-align:center;padding-top:10%" ng-show="errorSurvey"><span><i class="fa fa-calendar-o" aria-hidden="true"></i></span> {{messageError}}</h1>
+    <div ng-show="statusSurvey">
+        <section id="top-area">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 main-title">
+                        <h1 id="TitleConductionSurvey">{{titleSurvey}}</h1>
+                        <p>{{discriptionSurvey}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container" id="main">
+            <!-- Start Survey container -->
+            <div id="survey_container" class="wizard" novalidate="novalidate">
+                <div id="top-wizard">
+                    <strong>Progress <span id="location"></span></strong>
+                    <md-progress-linear md-mode="determinate" value="{{determinateValue}}"></md-progress-linear>
+                    <div class="shadow"></div>
+                </div><!-- end top-wizard -->
+
+                <form name="example-1" id="wrapped" action="survey_send_1.php" method="POST" class="wizard-form">
+
+                    <div id="middle-wizard" class="wizard-branch wizard-wrapper">
+
+                    </div>
+                    <div id="bottom-wizard" ng-show="buttonManyPage">
+                        <button id="buttonBackPage" type="button" name="backward" class="backward" disabled="disabled" ng-click="clickBack()">Backward</button>
+                        <button id="buttonNextPage" type="button" name="forward" class="forward" ng-show="buttonNextPage" ng-click="clickNext()">FORWARD</button>
+                        <button id="buttonSubmit" type="button" class="submit" ng-show="buttonSubmit" ng-click="submitData()">Submit ></button>
+                    </div>
+                    <div id="bottom-wizard" ng-show="buttonOncePage">
+                        <button type="button" ng-click="submitData()" class="forward">Submit</button>
+                    </div><!-- end bottom-wizard -->
+                </form>
+
+            </div>
+        </section>
+    </div>
+</div>

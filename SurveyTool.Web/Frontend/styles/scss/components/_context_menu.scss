@@ -1,0 +1,32 @@
+$context-menu-dividing-line: 1px solid #D7D7D7;
+$context-menu-font-color: $app-font-primary-color;
+
+.context-menu {
+	.nav {
+		border-bottom: $context-menu-dividing-line;
+
+		li {
+			a {
+				color: $context-menu-font-color;
+				background-color: transparent;
+				cursor: pointer;
+
+				&:hover {
+					font-weight: 700;
+				}
+			}
+
+			&.active {
+				a {
+					background-color: transparent;
+					font-weight: 700;
+					cursor: default;
+
+					&:hover {
+						color: inherit;
+					}
+				}
+			}
+		}
+	}
+}

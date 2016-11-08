@@ -1,0 +1,236 @@
+﻿$font-family-icon: 'FontAwesome' !default;
+$fa-var-check: "\f00c" !default;
+$check-icon: $fa-var-check !default;
+
+$input-color: #FFF;
+$input-border: #D0D0D0;
+$brand-primary: #006FC1;
+$input-bg-disabled: red;
+
+.general-form {
+    border: 1px solid $boder-gray-color;
+    padding: 10px 15px 15px 15px;
+
+    .form-control {
+        border-radius: 0;
+    }
+
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+
+        input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 100%;
+            min-height: 100%;
+            font-size: 100px;
+            text-align: right;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            cursor: inherit;
+            display: block;
+        }
+    }
+
+    .validate-message {
+        color: red;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .form-group {
+        &.required {
+            label {
+                &::after {
+                    content: " *";
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+
+@mixin checkbox-variant($parent, $color) {
+    #{$parent} input[type="checkbox"]:checked + label,
+    #{$parent} input[type="radio"]:checked + label {
+        &::before {
+            background-color: $color;
+            border-color: $color;
+        }
+
+        &::after {
+            color: #fff;
+        }
+    }
+}
+
+
+.checkbox {
+    padding-left: 20px;
+
+    label {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        padding-left: 5px;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            left: 0;
+            margin-left: -20px;
+            border: 1px solid $input-border;
+            background-color: #fff;
+        }
+
+        &::after {
+            display: inline-block;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 0;
+            margin-left: -20px;
+            padding-left: 3px;
+            padding-top: 1px;
+            font-size: 11px;
+            color: $input-color;
+        }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        opacity: 0;
+        z-index: 1;
+
+        &:checked + label::after {
+            font-family: $font-family-icon;
+            content: $check-icon;
+        }
+
+        &:disabled + label {
+            opacity: 0.65;
+
+            &::before {
+                background-color: $input-bg-disabled;
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    &.checkbox-circle label::before {
+        border-radius: 50%;
+    }
+
+    &.checkbox-inline {
+        margin-top: 0;
+    }
+}
+
+@include checkbox-variant('.checkbox-primary', $brand-primary);
+//
+// Radios
+// --------------------------------------------------
+@mixin radio-variant($parent, $color) {
+    #{$parent} input[type="radio"] {
+        &:checked + label {
+            &::before {
+                border-color: $color;
+            }
+
+            &::after {
+                background-color: $color;
+            }
+        }
+    }
+}
+
+.radio {
+    padding-left: 20px;
+
+    label {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        padding-left: 5px;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            left: 0;
+            margin-left: -20px;
+            border: 1px solid $input-border;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        &::after {
+            display: inline-block;
+            position: absolute;
+            content: " ";
+            width: 11px;
+            height: 11px;
+            left: 3px;
+            top: 3px;
+            margin-left: -20px;
+            border-radius: 50%;
+            background-color: $input-color;
+        }
+    }
+
+    input[type="radio"] {
+        opacity: 0;
+        z-index: 1;
+
+        &:disabled + label {
+            opacity: 0.65;
+
+            &::before {
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    &.radio-inline {
+        margin-top: 0;
+    }
+}
+
+@include radio-variant('.radio-primary', $brand-primary);
+
+input[type="checkbox"],
+input[type="radio"] {
+    &.styled:checked + label:after {
+        font-family: $font-family-icon;
+        content: $check-icon;
+    }
+
+    .styled:checked + label {
+        &::before {
+            color: #fff;
+        }
+
+        &::after {
+            color: #fff;
+        }
+    }
+}
+
+input[type="number"] {
+    border-color: #BBB;
+    padding-right: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}

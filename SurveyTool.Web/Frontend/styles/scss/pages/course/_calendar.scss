@@ -1,0 +1,137 @@
+﻿.course-calendar {
+    margin-top: 15px;
+
+    .fc-title {
+        cursor: pointer;
+    }
+
+    .fc-day-grid-container {
+        height: auto !important;
+
+        &.fc-scroller {
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+    }
+
+    .fc-event, .fc-event:hover, .ui-widget .fc-event {
+        color: black;
+        text-decoration: none;
+        background: #e6e6e6;
+        border-left:2px solid grey;
+        border-top: hidden;
+        border-right: hidden;
+        border-bottom: hidden;
+        border-radius: 0px;
+    }
+
+    .fc-widget-header {
+        background: #1FB2FF;
+        color: white;
+        font-weight: normal;
+    }
+
+    .fc-ltr .fc-basic-view .fc-day-number {
+        text-align: left;
+    }
+
+    .fc-state-hover {
+        background: #C0C0C0;
+    }
+
+    .fc-state-default.fc-corner-right {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .fc-state-default.fc-corner-left {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .fc-unthemed .fc-today {
+        background: #0072C6;
+    }
+
+    #calendar .fc-content-skeleton thead .fc-state-highlight {
+        color: #fff;
+    }
+
+    .fc-event .fc-content {
+        position: relative;
+        z-index: 2;
+        margin-top: 3px;
+    }
+
+    .fc-day-grid-event {
+        margin: 3px 2px 0;
+        padding: 8px 5px;
+    }
+
+    .registration-class {
+        background: #add1eb !important;
+        border-left:2px solid #3a87ad;
+    }
+}
+
+.course-calendar-tooltip {
+    .tooltip-inner {
+        max-width: 200px;
+        padding: 3px 8px;
+        text-align: center;
+        background-color: #FFF;
+        border-radius: 0px;
+        border: 2px solid #0170C1;
+        z-index: 1001;
+    }
+
+    .tooltipTitle {
+        background: #E5F2FA;
+        padding: 10px 0px 10px 10px;
+        color: #000;
+        text-align: left;
+        word-wrap: break-word;
+    }
+
+    .calendar-content {
+        color: black;
+        text-align: left;
+    }
+
+    .start-row-hour {
+        margin-left: 50px;
+    }
+
+    .end-row-hour {
+        margin-left: 56px;
+    }
+
+    .calendar-tooltip-trainer-row {
+        margin-top: 10px;
+    }
+
+    &.right .tooltip-arrow {
+        top: 50%;
+        left: 0;
+        margin-top: -5px;
+        border-width: 5px 5px 5px 0;
+        border-right-color: #0170C1;
+    }
+
+    &.left .tooltip-arrow {
+        top: 50%;
+        right: 0;
+        margin-top: -5px;
+        border-width: 5px 0 5px 5px;
+        border-left-color: #0170C1;
+    }
+
+    &.tooltip.in {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+
+    .calendar-tooltip {
+        background: #fff;
+    }
+}

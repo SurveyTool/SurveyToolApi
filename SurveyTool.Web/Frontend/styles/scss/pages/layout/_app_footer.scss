@@ -1,0 +1,12 @@
+﻿.app-footer {
+	@extend .app-side-padding;
+
+	background-color: $footer-background-color-light;
+	text-align: center;
+	padding: $footer-padding;
+
+	.copyright {
+		color: $copyright-font-color;
+		margin: 0;
+	}
+}

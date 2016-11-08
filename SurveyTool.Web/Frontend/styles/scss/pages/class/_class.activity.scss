@@ -1,0 +1,82 @@
+﻿.class-activity {
+    .button-range {
+        padding-left: 20px;
+    }
+
+    .status-not-started {
+        color: #CA5100;
+    }
+
+    .status-open {
+        color: #F3CB74;
+    }
+
+    .status-closed {
+        color: #207a0f;
+    }
+
+    .activity-col-created {
+        align-content: center;
+        align-items: center;
+        padding-right: 10px !important;
+        vertical-align: middle;
+        min-width: 90px;
+        margin-right: 20px;
+        width: 160px;
+    }
+
+    .activity-col-date {
+        width: 130px;
+    }
+
+    .activity-col-action {
+        width: 80px;
+    }
+
+    .activity-col-status {
+        width: 100px;
+    }
+
+    .activity-col-name {
+        word-break: break-all;
+        table-layout: fixed;
+        width: 400px;
+    }
+
+    .activity-col-number {
+        width: 20px;
+    }
+
+    .popover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1010;
+        display: none;
+        max-width: 600px;
+        padding: 1px;
+        text-align: center;
+        white-space: nowrap;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box;
+    }
+
+    .popover-content {
+        padding: 2px 6px;
+    }
+
+    .col-number {
+        width: 5px !important;
+        padding-right: 10px !important;
+    }
+}

@@ -1,0 +1,100 @@
+﻿$navigation-menu-item-color: $header-primary-font-color;
+$navigation-current-item-color: $header-hover-font-color;
+
+$navigation-menu-item-font-size: 17px;
+$navigation-sub-menu-item-font-size: 14px;
+
+$navigation-distance-between-items: 5em;
+
+$navigation-dividing-line: $header-dividing-line;
+
+.app-navigation {
+	text-align: center;
+
+	ul {
+		position: relative;
+		padding: 0px;
+		margin: 0px;
+		margin-bottom: -1px;
+		list-style: outside none none;
+
+		li {
+			display: inline-block;
+			padding: 0px;
+			margin-left: $navigation-distance-between-items;
+
+			&:first-child {
+				margin-left: 0px;
+			}
+
+			a {
+				display: inline-block;
+				padding: 0.75em 0px;
+				color: $navigation-menu-item-color;
+				text-decoration: none;
+				outline: medium none;
+				font-size: $navigation-menu-item-font-size;
+
+				&:hover {
+					color: $navigation-current-item-color;
+				}
+			}
+		}
+	}
+
+	.has-subnav {
+		margin-top: -1.2em;
+		border-bottom: $navigation-dividing-line;
+
+		> .current {
+			> a::before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				border-left: $navigation-dividing-line;
+				bottom: 0px;
+				height: 0.5em;
+			}
+		}
+
+		.current {
+
+			> a {
+				position: relative;
+				color: $navigation-current-item-color !important;
+				font-weight: 600;
+			}
+
+			.subnav {
+				display: block;
+			}
+		}
+
+		.subnav {
+			margin: 0px;
+			padding: 0px;
+			border-top: $navigation-dividing-line;
+			background: transparent none repeat scroll 0% 0%;
+			position: absolute;
+			top: 100%;
+			min-width: 100%;
+			right: 0px;
+			white-space: nowrap;
+			display: none;
+
+			li {
+				font-size: 0.85714em;
+
+				a {
+					color: $navigation-menu-item-color;
+					padding-top: 0.3em;
+					font-size: $navigation-sub-menu-item-font-size;
+
+					&:hover {
+						color: $navigation-current-item-color;
+					}
+				}
+			}
+		}
+	}
+}

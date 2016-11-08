@@ -1,0 +1,39 @@
+﻿<div class="login">
+    <div id="loginForm1" class="row loginForm" style="align-content:center">
+        <form class="general-form" name="loginForm" novalidate>
+            <input type="hidden" name="ReturnUrl" id="ReturnUrl" value="" />
+            <fieldset>
+                <legend style="font-size:22px;">Login on Training Tool</legend>
+                <div class="login-row">
+                    <input type="text" class="form-control" placeholder="Username" name="username"
+                           ng-maxlength="50" ng-model="username" required />
+                    <span class="validate-message" ng-show="loginForm.$submitted || loginForm.username.$dirty">
+                        <span ng-show="loginForm.username.$error.required">
+                            Username is required
+                        </span>
+                    </span>
+                </div>
+                <div class="login-row">
+                    <input type="password" class="form-control" placeholder="Password" name="password"
+                           ng-maxlength="50" ng-model="password" required />
+                    <span class="validate-message" ng-show="loginForm.$submitted || loginForm.password.$dirty">
+                        <span ng-show="loginForm.password.$error.required">
+                            Password is required
+                        </span>
+                    </span>
+                </div>
+                <div class="login-row form-group">
+                    <input type="submit" class="btn btn-primary-blue" value="Log in" ng-click="login(loginForm)" hidefocus="true" tabindex="-1" />
+                    <div class="validate-message" ng-show="errorMessage != null">
+                        <div ng-show="errorMessage && !loginForm.username.$error.maxlength">
+                            {{errorMessage}}
+                        </div>
+                    </div>
+                    <div class="validate-message" ng-show="loginForm.username.$error.maxlength">
+                        Invalid username
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

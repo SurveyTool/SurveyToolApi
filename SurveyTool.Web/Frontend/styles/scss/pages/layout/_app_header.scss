@@ -1,0 +1,153 @@
+﻿.app-header {
+    @extend .app-side-padding;
+    background-color: $header-background-color;
+    color: $header-primary-font-color;
+    background-color: $header-background-color;
+    color: $header-primary-font-color;
+    height: 43px;
+
+    a {
+        text-decoration: none;
+    }
+
+    .navbar-brand {
+        float: left;
+        font-size: 18px;
+        height: 50px;
+        line-height: 20px;
+        padding: 6px;
+
+        img {
+            height: 32px;
+        }
+    }
+
+    .col-app-title {
+        width: 240px;
+    }
+
+    .app-brand .app-title {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .search-box .search-input {
+        border-bottom: 1px solid #fff;
+        margin-top: 10px;
+        display: flex;
+
+        .text-input {
+            padding-left: 10px;
+        }
+
+        &.glyphicon-search:before {
+            height: 22px;
+        }
+    }
+
+    .col-menu-search {
+        width: 260px !important;
+    }
+
+    .col-menu-master {
+        width: calc(100% - 800px);
+        min-width: 420px;
+        text-align: center;
+
+        .master-menu-layout {
+            width: 100%;
+            background-color: #0170c1;
+            padding: 1px 0 0;
+            list-style: none;
+            font-family: Arial;
+
+            .item-menu-master {
+                font-size: 16px;
+                color: white;
+            }
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            display: inline-block;
+            position: relative;
+            line-height: 21px;
+            text-align: left;
+        }
+
+        ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            color: #F0B51C !important;
+        }
+
+        ul li ul.dropdown {
+            min-width: 175px;
+            background: #0170c1;
+            display: none;
+            position: absolute;
+            z-index: 999;
+            left: 0;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+        }
+
+        ul li ul.dropdown li {
+            display: block;
+        }
+    }
+
+    .col-user-login {
+        text-align: right;
+        width: 200px;
+    }
+
+    .user-greeting {
+        padding: 0;
+        padding-top: 14px;
+
+        .row {
+            margin: -4px;
+        }
+    }
+
+    .course-search-autocomplete-domain {
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .course-search-autocomplete-course {
+        font-family: Arial;
+        font-size: 12px;
+        width: 100%;
+        clear: both;
+        padding-left: 30px;
+    }
+
+    .dropdown-menu {
+        border-radius: 0;
+        cursor: pointer;
+
+        li {
+            border-bottom: 1px solid #EBEBEB;
+
+            strong {
+                color: #1EB2FF;
+            }
+        }
+    }
+}

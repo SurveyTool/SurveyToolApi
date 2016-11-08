@@ -1,0 +1,19 @@
+﻿<div class="modal-header">
+    <h4>{{modalOptions.headerText}} </h4>
+    <!--<a href="" title="Close" class="close" ng-click="$close()">x</a>-->    
+</div>
+<div class="modal-inside-content">
+    <div class="modal-body">
+        <p>{{modalOptions.bodyText}}</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary-gray"
+                data-ng-click="modalOptions.close()" data-ng-if="modalOptions.closeButtonText != ''">
+            {{modalOptions.closeButtonText}}
+        </button>
+        <button class="btn btn-primary-blue"
+                data-ng-click="modalOptions.ok();" data-ng-if="modalOptions.actionButtonText != ''">
+            {{modalOptions.actionButtonText}}
+        </button>
+    </div>
+</div>

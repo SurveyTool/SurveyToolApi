@@ -1,0 +1,221 @@
+﻿$title-size: 18px;
+$note-size: 12px;
+
+$boder-gray-color: #EBEBEB;
+$icon-red-color: #D13960;
+$icon-yellow-color: #EDB719;
+$icon-blue-color: #20B1FF;
+$icon-score-green-color: #6ECD59;
+$icon-score-yellow-color: #FFC72A;
+$icon-score-red-color: #E00724;
+
+.assignment-trainee {
+    .tooltip.customTooltip {
+        .tooltip-inner {
+            background-color: #777777;
+        }
+
+        .tooltip-arrow {
+            display: none;
+        }
+    }
+
+    .assignment-note {
+        font-style: italic;
+        font-size: $note-size;
+    }
+
+    .assignment-control {
+        border-radius: 5px;
+        border: 1px solid $boder-gray-color;
+        padding: 10px 15px 15px 30px;
+        margin: 15px 0 15px 0;
+
+        .assignment-title {
+            font-size: $title-size;
+            color: #0071C1;
+            font-weight: bold;
+            text-transform: uppercase;
+            float: left;
+            margin-right: 5px;
+        }
+
+        .icon-overdue {
+            color: $icon-red-color;
+        }
+
+        .icon-submit {
+            color: $icon-yellow-color;
+        }
+
+        .icon-no-score {
+            color: $icon-blue-color;
+        }
+
+        .icon-high-score {
+            color: $icon-score-green-color;
+        }
+
+        .icon-medium-score {
+            color: $icon-score-yellow-color;
+        }
+
+        .icon-low-score {
+            color: $icon-score-red-color;
+        }
+
+        .assignment-time {
+            margin-top: 15px;
+            margin-left: 15px;
+
+            .end-time {
+                color: red;
+            }
+        }
+
+        .description-label {
+            margin-left: 15px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .description-content {
+            margin: 0 10px 10px 15px;
+            word-wrap: break-word;
+        }
+
+        .attach-label {
+            margin-left: 15px;
+        }
+    }
+
+    .answer-control {
+        .answer-title {
+            font-size: $title-size;
+            color: #008238;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 30px;
+        }
+
+        .answer-status {
+            text-align: center;
+            height: 40px;
+            padding-top: 8px;
+            font-size: 16px;
+            margin: 5px 30px 0 30px;
+
+            &.cannot-submit {
+                background: #F6EBCD;
+                color: #F0B41E;
+            }
+
+            &.overdue {
+                background: #F4E1E5;
+                color: #D33860;
+            }
+        }
+
+        .general-form {
+            border: none;
+            margin-left: 40px;
+
+            .answer-text {
+                .btn {
+                    border-radius: 0;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    font-weight: 600;
+                    font-size: 12px;
+                }
+            }
+
+            .attach-file-lable {
+                margin-left: -15px;
+                font-size: 15px;
+            }
+
+            .input-upload-file {
+                margin-left: -40px;
+                height: 30px;
+            }
+
+            .maximum-file {
+                font-size: 12px;
+            }
+        }
+
+        .answer-time {
+            margin-left: 45px;
+        }
+
+        .answer-box {
+            margin: 10px 30px 0 75px;
+
+            .answer-content {
+                margin: 10px 20px 0 0;
+                word-wrap: break-word;
+            }
+        }
+
+        .score-box {
+            border-top: 1px solid $boder-gray-color;
+            margin: 15px 20px 0 65px;
+            padding-top: 10px;
+            display: flex;
+
+            .col-gray {
+                background: $boder-gray-color;
+                width: 10px;
+                float: left;
+                margin-left: 13px;
+            }
+
+            .comment-box {
+                margin-left: 10px;
+
+                .comment-title {
+                    font-weight: bold;
+                }
+
+                .comment-description {
+                    word-wrap: break-word;
+                    margin-top: 10px;
+                    margin-right: 10px;
+                }
+            }
+
+            .range-score {
+                height: 55px;
+                width: 65px;
+                color: white;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 32px;
+                font-style: italic;
+
+                &.high-score {
+                    background-color: $icon-score-green-color;
+                }
+
+                &.medium-score {
+                    background-color: $icon-score-yellow-color;
+                }
+
+                &.low-score {
+                    background-color: $icon-score-red-color;
+                }
+            }
+        }
+    }
+
+    .attached-file {
+        margin-left: -98px;
+
+        a {
+            color: #1FB2FF;
+            font-size: 15px;
+            text-decoration: underline;
+        }
+    }
+}

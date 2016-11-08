@@ -1,0 +1,19 @@
+﻿<div layout="row">
+   
+    <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">
+
+    </md-checkbox>
+    <md-input-container md-no-float flex>
+        
+        <input placeholder="Option Name" style="font-size:18px" flex="100" ng-model="option">
+        <md-icon style="cursor: pointer;" ng-click="removeOption()">
+            <md-tooltip>
+                Delete
+            </md-tooltip>
+            <i class="material-icons">clear</i>
+        </md-icon>
+    </md-input-container>
+    <p ng-show="showError" style="color:red">Option Similar</p>
+</div>
+
+

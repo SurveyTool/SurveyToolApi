@@ -1,0 +1,188 @@
+﻿<div ng-controller="DasboardController" style="margin-top:50px">
+    <ol class="breadcrumb" >
+        <li><a href="#">Home</a></li>
+        <li class="active">Dasboard</li>
+        
+    </ol>
+    <div layout="row" style="padding-top:10px;padding-left:10px;">
+        <i class="fa fa-home fa-3x" aria-hidden="true" style="margin-top:auto;margin-bottom:auto"></i>
+        <h2 style="margin-top:auto;margin-bottom:auto"> Dasboard</h2>
+    </div>
+    <div>
+        <button type="button" ng-click="createTemplate()" class="btn btn-success" style="margin-left:4%;margin-top:3%; height:50px; font-size:20px">+ Create Survey</button>
+    </div>
+    <div layout="row" style="margin-top:10px;margin-left:4%">
+        <span  class="toggler active" data-toggle="grid"><i class="fa fa-th" aria-hidden="true"></i><md-tooltip>Grid View</md-tooltip></span>
+        <span class="toggler" data-toggle="list"><i class="fa fa-list" aria-hidden="true"><md-tooltip>List View</md-tooltip></i></span>
+    </div>
+    
+    <br />
+    <br />
+    <img style="margin-left:10%;color:#00ff21" ng-src="Frontend/images/ring.svg" ng-show="waiting" width="80" height="80" class="md-card-image" alt="Washed Out">
+    <ul class="surveys grid" style="margin-left:4%;margin-right:4%">
+
+        <li class="survey-item" style="box-shadow: 0.3px 0.3px 0.3px 1px rgba(0, 0, 0, 0.1);" ng-repeat="bien in biens" ng-click="seeSurvey()">
+            <h1 class="survey-name">
+                {{bien.Title}}
+            </h1>
+            <div class="pull-right">
+
+                <span class="survey-progress" style="background:#fbfbfb">
+
+                    <span class="survey-progress-labels">
+
+
+                        <span class="survey-completes">
+                            <span class="survey-end-date">
+                                {{DecodeDate(bien.DateStart)}}
+                            </span>
+                            <md-button ng-click="showAdvanced($event, bien)" class="md-icon-button">
+                                <md-tooltip>
+                                    Report Survey
+                                </md-tooltip> 
+                                <md-icon><i class="fa fa-pie-chart" aria-hidden="true"></i></md-icon>
+                            </md-button>
+                            <md-menu>
+                                <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button">
+                                    <md-tooltip>
+                                        More
+                                    </md-tooltip> 
+                                    <md-icon><i class="fa fa-ellipsis-v" aria-hidden="true"></i></md-icon>
+                                </md-button>
+                                <md-menu-content width="3">
+                                    <md-menu-item>
+                                        <md-button ng-click="preview(bien)" target="_blank">
+                                            <i class="fa fa-eye fa-lg iconListMenuSurvey" aria-hidden="true"></i>
+                                            <span style="margin-left:5%" md-menu-align-target=""><a style="color:black;">Preview</a></span>
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="editSurvey(bien)"  target="_blank">
+                                            <i class="fa fa-pencil-square-o fa-lg iconListMenuSurvey" aria-hidden="true"></i>
+                                            <span style="margin-left:5%" md-menu-align-target="">New Template</span>
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="deleteSurvey($event,bien)">
+                                            <i class="fa fa-trash-o fa-lg iconListMenuSurvey" aria-hidden="true"></i>
+                                            <span style="margin-left:5%" md-menu-align-target="">Delete</span>
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="showAdvancedInfo($event,bien)">
+                                            <i class="fa fa-info fa-lg iconListMenuSurvey" aria-hidden="true"></i>
+                                            <span style="margin-left:5%" md-menu-align-target="">Info</span>
+                                        </md-button>
+                                    </md-menu-item>
+                                </md-menu-content>
+                            </md-menu>
+
+
+                        </span>
+                    </span>
+                </span>
+
+
+            </div>
+        </li>
+    </ul>
+    <script type="text/ng-template" id="dialog1.html">
+        <md-dialog aria-label="Mango (Fruit)" ng-cloak>
+            <form>
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>{{titleSurvey}}</h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" ng-href="#/{{linkResultSurvey}}" target="_blank">
+                            <md-icon aria-label="Close dialog"><i class="material-icons">open_in_new</i></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" ng-click="cancel()">
+                            <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                        </md-button>
+                        
+                    </div>
+                </md-toolbar>
+
+                <md-dialog-content>
+                    <div class="md-dialog-content" style="font-size:18px">
+                        <table class="table table-striped" id="projectSpreadsheet">
+
+                            <thead ng-show="hideTable">
+                                <tr><th ng-repeat="titleAnswer  in listAnswerObj[0]" align="center">{{titleAnswer.Contents}}</th></tr>
+                            </thead>
+                           
+                            <tbody ng-show="hideTable">
+                                <tr ng-repeat="contentAnswerRow in numberRow">
+                                    <td ng-repeat="i in numberColumn">{{contentAnswerRows[contentAnswerRow][i]}}</td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="tableR">
+                    <div class="rowR header green" >
+                        <div ng-repeat="titleAnswer  in listAnswerObj[0]" class="cellR">
+                            <div layout="row"  flex="100" >
+                                <div flex="98" style="text-align:center"><p style="margin-top:auto;margin-bottom:auto">{{titleAnswer.Contents}}</p></div>
+                                <div flex="2" style="margin-left:2%; align-content:stretch"  layout="column" ng-if="titleAnswer.Contents!='STT'">
+                                    <i  style="margin:auto" class="fa fa-caret-up" ng-attr-id="{{'icon1'+titleAnswer.$id}}" ng-click="sortItem(titleAnswer.Contents,true,titleAnswer.$id)"></i>
+                                    <i  style="margin-top:auto" class="fa fa-caret-down" ng-attr-id="{{'icon2'+titleAnswer.$id}}" ng-click="sortItem(titleAnswer.Contents,false,titleAnswer.$id)"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div ng-repeat="contentAnswerRow in numberRow" class="rowR">
+                        <div ng-repeat="i in numberColumn" class="cellR">
+                            {{contentAnswerRows[contentAnswerRow][i]}}
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </md-dialog-content>
+                <md-dialog-actions layout="row">
+                    
+                    
+                    <span flex></span>
+                    
+                    
+                    <md-button target="_blank" md-autofocus ng-click="refeshResult()">
+                        <span><i class="fa fa-refresh" aria-hidden="true"></i>Refesh</span>
+                    </md-button>
+                    <md-button ng-click="answer('useful')">
+                        Ok
+                    </md-button>               
+                 </md-dialog-actions>
+            </form>
+        </md-dialog>
+    </script>
+    <script type="text/ng-template" id="dialog1.tmpl.html">
+        <md-dialog aria-label="Info Survey" ng-cloak>
+            <form>
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Info Survey</h2>
+
+                    </div>
+                </md-toolbar>
+                <md-dialog-content style="margin:auto;font-size:18px;padding:5px">
+                    <p>Name Survey: <span id="infoSurvey">{{infoSurveyjson.Title}}</span></p>
+                    <p>Discription: <span id="infoSurvey">{{infoSurveyjson.Discription}}</span></p>
+                    <p>Date Start: <span id="infoSurvey">{{dateStart}}</span></p>
+                    <p>Deadline: <span id="infoSurvey">{{dateDeadline}}</span></p>
+                    <p>Number Page: <span id="infoSurvey">{{numberSection}}</span></p>
+                    <p>Number Question: <span id="infoSurvey">{{numberQuestion}}</span></p>
+                </md-dialog-content>
+
+                <md-dialog-actions layout="row">
+
+                    <span flex></span>
+
+                    <md-button ng-click="answer('ok')">
+                        OK!!!
+                    </md-button>
+                </md-dialog-actions>
+            </form>
+        </md-dialog>
+    </script>  
+
+</div>

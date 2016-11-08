@@ -1,0 +1,65 @@
+﻿.menu-survey {
+    .nav {
+        &.nav-tabs {
+            border-bottom: 2px solid #0064ad !important;
+        }
+    }
+
+    .breadcrumb > li {
+        display: inline;
+    }
+
+    .nav-pills > li {
+        .active {
+            background-color: #0070C0;
+            color: white;
+            font-weight: bold;
+        }
+    }
+
+    .nav > li > a:hover {
+        text-decoration: none;
+        color: white !important;
+        background-color: #0070C0 !important;
+    }
+
+    .nav {
+        border-bottom: 2px solid #0070C0;
+        list-style: outside none none;
+        margin-bottom: 2px;
+        padding-left: 0;
+    }
+
+    .nav-tag {
+        cursor: pointer;
+    }
+
+    .nav-pills > li > a {
+        border-radius: 6px 6px 0 0;
+        background-color: #dddddd;
+        color: #0070C0;
+        font-weight: bold;
+        width: 130px;
+        text-align: center;
+        margin-right: 3px;
+    }
+
+    .content-breadcrumb .breadcrumb {
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+    }
+
+    .content-breadcrumb .breadcrumb .survey-title {
+        color: #282424;
+        font-size: 21px;
+        font-weight: 500;
+    }
+
+    .content-primary-header, .content-breadcrumb .breadcrumb > li a {
+        background-color: transparent;
+        color: #006fc1;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
