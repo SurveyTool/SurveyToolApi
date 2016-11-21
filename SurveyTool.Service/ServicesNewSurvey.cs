@@ -94,6 +94,12 @@ namespace ServicesSurveyTool
             }
             return -1;
         }
+        public bool AddSubSurvey(SubUserSurvey subSurvey)
+        {
+            db.SubUserSurveys.Add(subSurvey);
+            db.SaveChanges();
+            return true;
+        }
         public Survey ConvertJsonToObject(JObject obj)
         {
             try
@@ -103,10 +109,9 @@ namespace ServicesSurveyTool
                 survey.DateStart = (DateTime)obj["datestart"];
                 survey.Deadline = (DateTime)obj["deadline"];
                 survey.Discription = (String)obj["discription"];
-                survey.UserId = GetIdUser((string)obj["username"]);
+                //survey.UserId = GetIdUser((string)obj["username"]);
                 survey.AllowAddAnother = (bool)obj["allowAddAnother"];
                 survey.LimitNumber = (int)obj["numberPerson"];
-
                 survey.EndPage = (string)obj["messageEndSurvey"];
                 return survey;
             }

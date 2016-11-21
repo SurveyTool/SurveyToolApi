@@ -46,3 +46,8 @@ myapp.config(function ($mdThemingProvider) {
        })
 
 });
+myapp.factory("configApi", function ($rootScope) {
+    var configApi = {};
+    configApi.hostApi = "";
+    return configApi;
+});

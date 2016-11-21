@@ -136,7 +136,35 @@
         var urlConduct = "http://" + host + ":" + port + "/#/editsurvey?id=" + bien.Id;
         window.open(urlConduct);
     }
+    $scope.dialogAddMember=function(ev, surveyChoice)
+    {
+        var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
+        $scope.bien = "02";
+        $mdDialog.show({
+            controller: AddMemberController,
+            templateUrl: 'addMember.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose: true,
+            fullscreen: useFullScreen,
+            locals: {
+                scopes: $scope
+            }
+        })
+        .then(function (answer) {
+            $scope.status = 'You said the information was "' + answer + '".';
+        }, function () {
+            $scope.status = 'You cancelled the dialog.';
+        });
 
+
+
+        $scope.$watch(function () {
+            return $mdMedia('xs') || $mdMedia('sm');
+        }, function (wantsFullScreen) {
+            $scope.customFullscreen = (wantsFullScreen === true);
+        });
+    }
 
 });
 function DialogResultController(AngularServicesGetDataServey, $scope, $mdDialog, scopes, AngularServicesDasboard) {
@@ -389,5 +417,9 @@ function DialogDetailController($scope, $mdDialog, AngularServicesDasboard, IdSu
         numberQuestion: "10",
         answer: "20"
     };
+
+}
+function AddMemberController($q, $timeout, scopes)
+{
 
 }

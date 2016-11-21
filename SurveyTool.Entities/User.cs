@@ -26,7 +26,9 @@ namespace EntityFrameworks
         public string Gender { get; set; }
         [StringLength(255)]
         public string Company { get; set; }
-        public virtual ICollection<Survey> Surveys { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SubUserSurvey> SubUserSurveys { get; set; }
 
     }
 }

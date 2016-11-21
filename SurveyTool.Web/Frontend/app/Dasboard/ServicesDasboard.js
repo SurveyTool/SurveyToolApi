@@ -1,9 +1,9 @@
 ﻿
-myapp.service("AngularServicesDasboard", function ($http) {
+myapp.service("AngularServicesDasboard", function ($http, configApi) {
     this.GetAllSurvey = function (userName) {
         return $http({
             method: "get",
-            url: "managesurvey/getallsurvey",
+            url: configApi.hostApi+ "managesurvey/getallsurvey",
             params: {
                 UserName: userName
             }
@@ -15,7 +15,7 @@ myapp.service("AngularServicesDasboard", function ($http) {
     {
         return $http({
             method: "post",
-            url: "managesurvey/deletesurvey",
+            url: configApi.hostApi+ "managesurvey/deletesurvey",
             params: {
                 IdSurvey: Id
             }
@@ -27,7 +27,7 @@ myapp.service("AngularServicesDasboard", function ($http) {
     {
         return $http({
             method: "get",
-            url: "loadingdatasurvey/GetListAnswerBySurvey",
+            url: configApi.hostApi+ "loadingdatasurvey/GetListAnswerBySurvey",
             params: {
                 IdSurvey: IdSurvey
             }
@@ -39,7 +39,7 @@ myapp.service("AngularServicesDasboard", function ($http) {
     this.GetListQuestionType = function () {
         var data = $http({
             method: "get",
-            url: "loadingdatasurvey/GetListQuestionType",
+            url: configApi.hostApi+ "loadingdatasurvey/GetListQuestionType",
             params: {
             }
         })
@@ -50,7 +50,7 @@ myapp.service("AngularServicesDasboard", function ($http) {
     this.GetDataSurveyInfo = function (IdSurvey) {
         return $http({
             method: "get",
-            url: "loadingdatasurvey/GetInformationSurvey",
+            url: configApi.hostApi+ "loadingdatasurvey/GetInformationSurvey",
             params: {
                 IdSurvey: IdSurvey
             }
@@ -62,7 +62,7 @@ myapp.service("AngularServicesDasboard", function ($http) {
     this.GetNumberQuestion = function (IdSurvey) {
         return $http({
             method: "get",
-            url: "loadingdatasurvey/GetNumberQuestion",
+            url: configApi.hostApi+ "loadingdatasurvey/GetNumberQuestion",
             params: {
                 IdSurvey: IdSurvey
             }
@@ -74,7 +74,7 @@ myapp.service("AngularServicesDasboard", function ($http) {
     this.GetNumberSection = function (IdSurvey) {
         return $http({
             method: "get",
-            url: "loadingdatasurvey/GetNumberSection",
+            url: configApi.hostApi+ "loadingdatasurvey/GetNumberSection",
             params: {
                 IdSurvey: IdSurvey
             }

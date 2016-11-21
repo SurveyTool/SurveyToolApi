@@ -22,10 +22,10 @@ namespace EntityFrameworks
         public DateTime Deadline { get; set; }
         public bool AllowAddAnother { get; set; }
         public int LimitNumber { get; set; }
-        public int UserId { get; set; }
-        [ForeignKey("UserId")]
-        public virtual User User { get; set; }
+       
         public virtual ICollection<Section> Sections { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SubUserSurvey> SubUserSurveys { get; set; }
 
     }
 }

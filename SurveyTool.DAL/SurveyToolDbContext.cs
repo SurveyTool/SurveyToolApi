@@ -25,9 +25,20 @@ namespace DAL
         public DbSet<QuestionOption> QuestionOptions { get; set; }
         public DbSet<OptionChoice> OptionChoices { get; set; }
         public DbSet<Answer> Answers { get; set; }
+        public DbSet<SubUserSurvey> SubUserSurveys { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Survey>()
+         .HasMany(e => e.SubUserSurveys)
+         .WithRequired(e => e.Survey)
+         .HasForeignKey(e => e.IdSurvey)
+         .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.SubUserSurveys)
+                .WithRequired(e => e.User)
+                .HasForeignKey(e => e.IdUser)
+                .WillCascadeOnDelete(false);
         }
 
 

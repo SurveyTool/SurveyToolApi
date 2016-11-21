@@ -1,8 +1,8 @@
-﻿myapp.service("AngularServicesRegister", function ($http) {
+﻿myapp.service("AngularServicesRegister", function ($http, configApi) {
     this.checkExistsUserName = function (username) {
         return $http({
             method: "post",
-            url: "LoginRegister/CheckExistsUserNameInRegister",
+            url: configApi.hostApi+ "LoginRegister/CheckExistsUserNameInRegister",
             params: {
                 username: username
             }
@@ -14,7 +14,7 @@
     this.checkExistsEmail = function (email) {
         return $http({
             method: "post",
-            url: "LoginRegister/CheckExistsEmailInRegister",
+            url: configApi.hostApi+ "LoginRegister/CheckExistsEmailInRegister",
             params: {
                 email: email
             }
@@ -27,7 +27,7 @@
     {
         return $http({
             method: "post",
-            url: "LoginRegister/SubmitUser",
+            url: configApi.hostApi+ "LoginRegister/SubmitUser",
             params: {
                 fullname: fullname,
                 username: username,

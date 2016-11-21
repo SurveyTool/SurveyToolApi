@@ -1,8 +1,8 @@
-﻿myapp.service("AngularServicesGetDataServey", function ($http) {
+﻿myapp.service("AngularServicesGetDataServey", function ($http, configApi) {
     this.GetDataSurvey = function (IdSurvey) {
         var data=$http({
             method: "get",
-            url: "loadingdatasurvey/GetInformationSurvey",
+            url: configApi.hostApi+"loadingdatasurvey/GetInformationSurvey",
             params: {
                 IdSurvey: IdSurvey
             }
@@ -14,7 +14,7 @@
     this.GetListSectionBySurvey = function (IdSurvey) {
         var data = $http({
             method: "get",
-            url: "loadingdatasurvey/GetListSectionBySurvey",
+            url: configApi.hostApi+"loadingdatasurvey/GetListSectionBySurvey",
             params: {
                 IdSurvey: IdSurvey
             }
@@ -26,7 +26,7 @@
     this.GetListQuestionType = function () {
         var data = $http({
             method: "get",
-            url: "loadingdatasurvey/GetListQuestionType",
+            url: configApi.hostApi+"loadingdatasurvey/GetListQuestionType",
             params: {
             }
         })
@@ -37,7 +37,7 @@
     this.GetListQuestionBySection = function (IdSection) {
         var data = $http({
             method: "get",
-            url: "loadingdatasurvey/GetListQuestionBySection",
+            url: configApi.hostApi+"loadingdatasurvey/GetListQuestionBySection",
             params:
             {
                 IdSection: IdSection
@@ -52,7 +52,7 @@
         
         var data = $http({
             method: "get",
-            url: "loadingdatasurvey/GetListQuestionByIdSurvey",
+            url: configApi.hostApi+"loadingdatasurvey/GetListQuestionByIdSurvey",
             params:
             {
                 IdSurvey: IdSurvey
@@ -65,7 +65,7 @@
     this.GetListOptionChoiceByQuestion = function (IdQuestion) {
         var data = $http({
             method: "get",
-            url: "loadingdatasurvey/GetListOptionChoiceByQuestion",
+            url: configApi.hostApi+"loadingdatasurvey/GetListOptionChoiceByQuestion",
             params:
             {
                 IdQuestion: IdQuestion
@@ -78,7 +78,7 @@
     this.PostDataInput = function (dataInput) {
         var data = $http({
             method: "post",
-            url: "informationuserinput/addrecord",
+            url: configApi.hostApi+"informationuserinput/addrecord",
             params:
             {
                 dataJson: dataInput
@@ -91,7 +91,7 @@
     this.CheckValidDateSurvey = function (IdSurvey) {
         var data = $http({
             method: "post",
-            url: "checkvalidinfo/CheckValidDateSurvey",
+            url: configApi.hostApi+"checkvalidinfo/CheckValidDateSurvey",
             params:
             {
                 IdSurvey: IdSurvey
@@ -104,7 +104,7 @@
     this.CheckNumberPerson = function (IdSurvey) {
         var data = $http({
             method: "post",
-            url: "checkvalidinfo/CheckNumberPerSon",
+            url: configApi.hostApi+"checkvalidinfo/CheckNumberPerSon",
             params:
             {
                 IdSurvey: IdSurvey

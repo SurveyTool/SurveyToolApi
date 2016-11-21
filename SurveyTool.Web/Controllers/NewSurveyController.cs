@@ -25,6 +25,10 @@ namespace SurveyTool.Controllers
             ///////
             Survey survey = services.ConvertJsonToObject(obj);
             services.AddSurvey(survey);
+            SubUserSurvey subSurvey = new SubUserSurvey();
+            subSurvey.IdSurvey = survey.Id;
+            subSurvey.IdUser = services.GetIdUser((string)obj["username"]);
+            services.AddSubSurvey(subSurvey);
             ////// create survey
 
             //////

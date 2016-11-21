@@ -18,5 +18,6 @@ namespace ServicesSurveyTool
         bool AddOptionChoice(OptionChoice option);
         bool AddQuestionOption(QuestionOption questionOption);
         bool AddQuestion(Question question);
+        bool AddSubSurvey(SubUserSurvey subSurvey);
     }
 }

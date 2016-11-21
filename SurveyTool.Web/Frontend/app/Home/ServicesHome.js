@@ -1,8 +1,8 @@
-﻿myapp.service("AngularServicesHome", function ($http) {
+﻿myapp.service("AngularServicesHome", function ($http, configApi) {
     this.CheckLogin = function (username, password) {
         return $http({
             method: "post",
-            url: "LoginRegister/CheckLogin",
+            url: configApi.hostApi+ "LoginRegister/CheckLogin",
             params: {
                 username: username,
                 password: password

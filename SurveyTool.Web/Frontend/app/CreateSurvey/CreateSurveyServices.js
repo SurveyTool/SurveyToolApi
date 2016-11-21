@@ -1,8 +1,8 @@
-﻿myapp.service("AngularCreateSurvey", function ($http) {
+﻿myapp.service("AngularCreateSurvey", function ($http, configApi) {
     this.sendDataSurvey = function (dataSurvey) {
         var response = $http({
             method: "post",
-            url: "NewSurvey/createsurvey",
+            url: configApi.hostApi+ "NewSurvey/createsurvey",
             params: {
                 dataSurvey: dataSurvey
             }
@@ -15,7 +15,7 @@
     this.getIdNewSurvey = function (dataSurvey) {
         var response = $http({
             method: "get",
-            url: "loadingdatasurvey/GetIdNewSurvey",
+            url: configApi.hostApi+ "loadingdatasurvey/GetIdNewSurvey",
         });
         return response;
     }

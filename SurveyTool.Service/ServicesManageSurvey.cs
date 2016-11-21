@@ -35,25 +35,19 @@ namespace ServicesSurveyTool
                 return null;
             }
             List<Survey> listSurvey = new List<Survey>();
-            foreach(var item in db.Surveys.ToList())
+            List<SubUserSurvey> subSurveys=db.SubUserSurveys.Where(x => x.IdUser == IdUser).ToList();
+            foreach(var subSurvey in subSurveys)
             {
-
-                if (item.UserId == IdUser)
-                {
-                    Survey temp = new Survey();
-                    temp.Id = item.Id;
-                    temp.Title = item.Title;
-                    temp.EndPage = item.EndPage;
-                    temp.Discription = item.Discription;
-                    temp.Deadline = item.Deadline;
-                    temp.DateStart = item.DateStart;
-
-                    listSurvey.Add(temp);
-                }
-                
-                
+                Survey item = db.Surveys.Where(x => x.Id == subSurvey.IdSurvey).FirstOrDefault();
+                Survey temp = new Survey();
+                temp.Id = item.Id;
+                temp.Title = item.Title;
+                temp.EndPage = item.EndPage;
+                temp.Discription = item.Discription;
+                temp.Deadline = item.Deadline;
+                temp.DateStart = item.DateStart;
+                listSurvey.Add(temp);
             }
-            
             return listSurvey;
         }
         public Survey GetSurvey(int IdSurvey)
