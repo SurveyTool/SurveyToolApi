@@ -1,4 +1,4 @@
-﻿<div ng-controller="DasboardController" style="margin-top:50px">
+﻿<div ng-controller="DasboardController as ctrl" style="margin-top:60px">
     <ol class="breadcrumb" >
         <li><a href="#">Home</a></li>
         <li class="active">Dasboard</li>
@@ -162,38 +162,20 @@
         </md-dialog>
     </script>
     <script type="text/ng-template" id="addMember.html">
-        <md-dialog aria-label="Mango (Fruit)" ng-cloak>
+      
             <form>
-                <md-toolbar>
-                    
-                    <div class="md-toolbar-tools">
-                        <span flex></span>
-                        <md-button class="md-icon-button" ng-click="cancel()">
-                            <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
-                        </md-button>
-
-                    </div>
-                </md-toolbar>
-
-                <md-dialog-content>
-                    <md-contact-chips  style="background:black" ng-model="ctrl.contacts" md-contacts="ctrl.querySearch($query)" md-contact-name="name" md-contact-image="image" md-contact-email="email" md-require-match="true" md-highlight-flags="i" filter-selected="ctrl.filterSelected" placeholder="To">
-                    </md-contact-chips>
-                </md-dialog-content>
-                <md-dialog-actions layout="row">
-
-
-                    <span flex></span>
-
-
-                    <md-button target="_blank" md-autofocus ng-click="refeshResult()">
-                        <span><i class="fa fa-refresh" aria-hidden="true"></i>Refesh</span>
-                    </md-button>
-                    <md-button ng-click="answer('useful')">
-                        Ok
-                    </md-button>
-                </md-dialog-actions>
+                <md-contact-chips ng-model="contacts" md-contacts="delayedQuerySearch($query)" 
+                                  md-contact-name="name" md-contact-image="image" 
+                                  md-contact-email="email" 
+                                  md-require-match="true" 
+                                  md-highlight-flags="i" 
+                                  filter-selected="filterSelected" 
+                                  placeholder="To">
+                </md-contact-chips>
+               
+               
             </form>
-        </md-dialog>
+       
     </script>
     <script type="text/ng-template" id="dialog1.tmpl.html">
         <md-dialog aria-label="Info Survey" ng-cloak>

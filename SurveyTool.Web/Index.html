@@ -60,36 +60,75 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Add your site or application content here -->
-    <div ng-controller="MasterController" class="Row">
-        <nav class="navbar navbar-inverse navbar-fixed-top" style="height:40px; color:aliceblue; background-color:#5F5F5F; border-color:#7a7a7a">
-
-            <div class="navbar-header" id="labelHome">
-                <a style="color:white" class="navbar-brand" href="#home">
-                    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-
-                <ul class="nav navbar-nav navbar-right">
-            
-
-                    <li ng-show="notLogin" id="labelRegisters">
-                        <a href="#register">
-                            <i class="fa fa-sign-in fa-lg"  aria-hidden="true"></i> 
-                            Sign Up
-                        </a>
-                    </li>
-                    <li ng-show="notLogin" ng-click="showLogin($event)" id="labelLogins"><a><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
-                    <li ng-show="Logged" id="logged" ng-click="clickUser()">
-                        <a style="font-size:13px">{{nameUser}}<i style="margin-left:2px" class="fa fa-futbol-o fa-lg" aria-hidden="true"></i></a>
-                    </li>
-                    <li ng-show="Logged" ng-click="logoutUser()" style="border-left:solid 1px white" id="labelHome"><a><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-
-                </ul>
-            </div>
-
-        </nav>
-    </div>
+    <md-toolbar ng-controller="MasterController" style="background:#5f5f5f;position:fixed; box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;" class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+          <md-icon ><i style="color:white" class="fa fa-home fa-lg" aria-hidden="true"></i></md-icon>
+        </md-button>
+       
+        <span flex=""></span>
+       
+          <md-menu ng-show="Logged" md-position-mode="target-right bottom" md-offset="0 -7">
+              <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button">
+                      <md-icon><i class="material-icons">notifications</i></md-icon>
+                  </md-button>
+              <md-menu-content width="7" style="height:700px">
+                  <md-menu-item>
+                      <md-content>
+                          <md-list>
+                              <md-list-item class="md-3-line" >
+                                  <div class="md-list-item-text">
+                                      <h3 style="text-align:left">nhn12</h3>
+                                      
+                                      <p>Request join survey ABC</p>
+                                  </div>
+                                  <md-button style="background:green; color:white" class="md-secondary">Join</md-button>
+                                  <md-divider ng-if="!$last"></md-divider>
+                              </md-list-item>
+                          </md-list>
+                      </md-content>
+                  </md-menu-item>
+              </md-menu-content>
+          </md-menu>
+      
+        
+          <md-button style="color:white; border-right:solid 1px white" ng-show="notLogin" ng-click="showLogin($event)">
+              <md-icon><i class="material-icons">arrow_upward</i></md-icon>
+              Sign In
+          </md-button>
+          <md-button style="color:white" ng-show="notLogin" ng-href="#register" >
+              <md-icon><i class="material-icons">vpn_key</i></md-icon>
+                  Sign Up
+          </md-button>
+          <md-button ng-show="Logged" style="font-size:15px;color:white">
+              hi, {{nameUser}}<md-icon><i class="material-icons">face</i></md-icon>
+          </md-button>
+          <md-menu style="border-left:solid 1px white" ng-show="Logged" md-position-mode="target-right bottom">
+                      <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" >
+                          <md-tooltip>
+                              More Profile
+                          </md-tooltip>
+                          <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+                      </md-button>
+                      <md-menu-content width="3" >
+                          <md-menu-item>
+                              <md-button ng-click="logoutUser()">
+                                  <md-icon><i class="material-icons">person_pin</i></md-icon>
+                                  <span style="margin-left:5%" md-menu-align-target="">Detail Profile</span>
+                              </md-button>
+                              </md-menu-item>
+                                <md-menu-item>
+                                    <md-button ng-click="logoutUser()">
+                                        <md-icon><i class="material-icons">arrow_downward</i></md-icon>
+                                        <span style="margin-left:5%" md-menu-align-target="">Logout</span>
+                                    </md-button>
+                                </md-menu-item>
+              </md-menu-content>
+          </md-menu>
+          
+      </div>
+    </md-toolbar>
+    
 
     <div class="Row Expand" style="margin-top:50px;width:100%" ng-view></div>
     <!-- build:js Frontend/scripts/vendor.js -->

@@ -364,9 +364,6 @@ function DialogResultController(AngularServicesGetDataServey, $scope, $mdDialog,
         }
 
     }
-    
-
-
 }
 function ConvertIdToNameQuestionType(ObjDictionnaryTypeQuestion, idType)
 {
@@ -419,7 +416,84 @@ function DialogDetailController($scope, $mdDialog, AngularServicesDasboard, IdSu
     };
 
 }
-function AddMemberController($q, $timeout, scopes)
+function AddMemberController($scope,$q, $timeout, scopes)
 {
+    var pendingSearch, cancelSearch = angular.noop;
+    var cachedQuery, lastSearch;
 
+    $scope.allContacts = loadContacts();
+    $scope.contacts = [$scope.allContacts[0]];
+    $scope.asyncContacts = [];
+    $scope.filterSelected = true;
+
+    $scope.querySearch = querySearch;
+    $scope.delayedQuerySearch = delayedQuerySearch;
+   
+    function querySearch(criteria) {
+        cachedQuery = cachedQuery || criteria;
+        return cachedQuery ? $scope.allContacts.filter(createFilterFor(cachedQuery)) : [];
+    }
+
+    function createFilterFor(query) {
+        var lowercaseQuery = angular.lowercase(query);
+
+        return function filterFn(contact) {
+            return (contact._lowername.indexOf(lowercaseQuery) != -1);;
+        };
+
+    }
+    function loadContacts() {
+        var contacts = [
+          'Marina Augustine',
+          'Oddr Sarno',
+          'Nick Giannopoulos',
+          'Narayana Garner',
+          'Anita Gros',
+          'Megan Smith',
+          'Tsvetko Metzger',
+          'Hector Simek',
+          'Some-guy withalongalastaname'
+        ];
+
+        return contacts.map(function (c, index) {
+            var cParts = c.split(' ');
+            var contact = {
+                name: c,
+                email: cParts[0][0].toLowerCase() + '.' + cParts[1].toLowerCase() + '@example.com',
+                image: 'http://lorempixel.com/50/50/people?' + index
+            };
+            contact._lowername = contact.name.toLowerCase();
+            return contact;
+        });
+    }
+    function delayedQuerySearch(criteria) {
+        cachedQuery = criteria;
+        if (!pendingSearch || !debounceSearch()) {
+            cancelSearch();
+
+            return pendingSearch = $q(function (resolve, reject) {
+                // Simulate async search... (after debouncing)
+                cancelSearch = reject;
+                $timeout(function () {
+
+                    resolve($scope.querySearch());
+
+                    refreshDebounce();
+                }, Math.random() * 500, true)
+            });
+        }
+
+        return pendingSearch;
+    }
+    function refreshDebounce() {
+        lastSearch = 0;
+        pendingSearch = null;
+        cancelSearch = angular.noop;
+    }
+    function debounceSearch() {
+        var now = new Date().getMilliseconds();
+        lastSearch = lastSearch || now;
+
+        return ((now - lastSearch) < 300);
+    }
 }

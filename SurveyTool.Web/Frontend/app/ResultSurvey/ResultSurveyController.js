@@ -344,8 +344,8 @@ function AddChart($scope,$compile,$rootScope, nameChart, listData)
     scopeChart.options = {
         chart: {
             type: 'pieChart',
-            height: 300,
-           width:273,
+            height: 230,
+           width:230,
             x: function (d) { return d.key; },
             y: function (d) { return d.y; },
             showLabels: true,
